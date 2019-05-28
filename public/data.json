@@ -27,23 +27,57 @@
     }
   },
   "1": {
-    "pic": "",
-    "price": "",
-    "title": ""
+    "0": {
+      "pic": "images/shoesPics/6.png",
+      "price": "$359.99",
+      "title": "Nike Air Max 270"
+    },
+    "1": {
+      "pic": "images/shoesPics/7.png",
+      "price": "$245.68",
+      "title": "Nike Tanjun"
+    },
+    "2": {
+      "pic": "images/shoesPics/8.png",
+      "price": "$249.99",
+      "title": "Nike React Element 55"
+    },
+    "3": {
+      "pic": "images/shoesPics/9.png",
+      "price": "$449.99",
+      "title": "Nike Air Force 1 07"
+    },
+    "4": {
+      "pic": "images/shoesPics/10.png",
+      "price": "$185.55",
+      "title": "Nike Classic Cortez"
+    }
   },
   "2": {
-    "pic": "",
-    "price": "",
-    "title": ""
-  },
-  "3": {
-    "pic": "",
-    "price": "",
-    "title": ""
-  },
-  "4": {
-    "pic": "",
-    "price": "",
-    "title": ""
+    "0": {
+      "pic": "images/shoesPics/11.png",
+      "price": "$289.99",
+      "title": "Nike M2K Tekno"
+    },
+    "1": {
+      "pic": "images/shoesPics/12.png",
+      "price": "$155.68",
+      "title": "Nike Air Huarache Ultra"
+    },
+    "2": {
+      "pic": "images/shoesPics/13.png",
+      "price": "$144.99",
+      "title": "Nike Air VaporMax Plus"
+    },
+    "3": {
+      "pic": "images/shoesPics/14.png",
+      "price": "$449.99",
+      "title": "Nike Air Max 270 Bowfin"
+    },
+    "4": {
+      "pic": "images/shoesPics/15.png",
+      "price": "$225.55",
+      "title": "Nike Roshe One"
+    }
   }
 }

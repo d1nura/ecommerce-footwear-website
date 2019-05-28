@@ -1,8 +1,8 @@
 .menu {
   position: relative;
-  height: 100%;
+  height: auto;
   width: 48vw;
-  // border: 1px solid rgb(43, 255, 0);
+  //border: 1px solid rgb(43, 255, 0);
   display: grid;
   grid-template-columns: 90% 10%;
   transform: translateX(-90%);

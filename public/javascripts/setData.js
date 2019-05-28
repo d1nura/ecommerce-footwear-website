@@ -3,14 +3,7 @@ export function setData() {
 
   let leftArrow = document.querySelector("#leftArrow");
   let rightArrow = document.querySelector("#rightArrow");
-
-  leftArrow.onclick = () => {
-    console.log("left Arrow");
-  };
-
-  rightArrow.onclick = () => {
-    console.log("right arrow");
-  };
+  let sup = document.querySelector("sup");
 
   fetch("/data.json")
     .then(res => res.json())
@@ -18,7 +11,25 @@ export function setData() {
       console.log(data[0][0]);
       selectCover(0, data);
       selectShowBoxes(0, data);
-      //converContent.querySelector('img').src=
+      let no = 0;
+      rightArrow.onclick = () => {
+        console.log(no);
+        if (no < 2) {
+          no++;
+          selectCover(no, data);
+          selectShowBoxes(no, data);
+          sup.innerText = parseInt(sup.innerText) + 1;
+        }
+      };
+      leftArrow.onclick = () => {
+        console.log(no);
+        if (no > 0) {
+          no--;
+          selectCover(no, data);
+          selectShowBoxes(no, data);
+          sup.innerText = parseInt(sup.innerText) - 1;
+        }
+      };
     });
 }
 
