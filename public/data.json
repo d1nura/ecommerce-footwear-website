@@ -1,10 +1,30 @@
 {
   "0": {
-    "0": { "pic": "1", "price": "", "title": "" },
-    "1": { "pic": "", "price": "", "title": "" },
-    "2": { "pic": "", "price": "", "title": "" },
-    "3": { "pic": "", "price": "", "title": "" },
-    "4": { "pic": "", "price": "", "title": "" }
+    "0": {
+      "pic": "images/shoesPics/1.png",
+      "price": "$255.99",
+      "title": "Nike Lunar Epic Flyknit"
+    },
+    "1": {
+      "pic": "images/shoesPics/2.png",
+      "price": "$145.68",
+      "title": "Nike SB Koston Hyperfeel 3"
+    },
+    "2": {
+      "pic": "images/shoesPics/3.png",
+      "price": "$244.99",
+      "title": "NikeLab ACG Lupinek Flyknit Low SFB"
+    },
+    "3": {
+      "pic": "images/shoesPics/4.png",
+      "price": "$349.99",
+      "title": "NikeLab Air Zoom LWP x Kim Jones"
+    },
+    "4": {
+      "pic": "images/shoesPics/5.png",
+      "price": "$125.55",
+      "title": "NikeLab Air Rift Wrap"
+    }
   },
   "1": {
     "pic": "",
