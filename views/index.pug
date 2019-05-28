@@ -1,0 +1,31 @@
+include includes/header.pug 
+
+link(rel="stylesheet", href="/stylesheets/index/index.css")
+
+body
+    .container
+        .content
+            include includes/menu.pug
+
+            .cover 
+                .coverContent
+                    img(src="", alt="")
+                    #price
+                        
+                    #title    
+                
+            .shoeBoxes
+                #b 
+                    .box#box1
+                    .box#box2
+                    .box#box3
+                    .box#box4
+
+                .arrows
+                    img#leftArrow(src="/images/icons/left-arrow.svg")
+                    p #[sup 1]/#[sub 3]
+                    img#rightArrow(src="/images/icons/right-arrow.svg")
+
+            include includes/footer.pug        
+
+    script(src="/javascripts/index.js" type="module")            

@@ -1,0 +1,33 @@
+@import "../partials/main";
+@import "../partials/menu";
+@import "../partials/footer";
+@import "../partials/shoeBoxes";
+@import "../partials/cover";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  //border: 1px solid red;
+  background: orange;
+  //padding: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: fixed;
+  //border: 1px solid rgb(42, 216, 11);
+  height: 92vh;
+  width: 96vw;
+  background: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-rows: auto;
+  overflow: hidden;
+}
+
+.cover {
+  //border: 1px solid red;
+}
