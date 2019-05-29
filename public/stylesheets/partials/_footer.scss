@@ -1,3 +1,11 @@
 .footer {
-  //border: 1px solid red;
+  position: relative;
+  #shoppingBag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5vw;
+    cursor: pointer;
+    transform: translate(-50%, -100%);
+  }
 }

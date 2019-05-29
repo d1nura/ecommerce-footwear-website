@@ -14,19 +14,35 @@ export function setDetails() {
 
       shoeDetails.style.transform = "translate(100%)";
       let t = e.target.closest(".box");
-      //t.querySelector("img").src
-      // console.log(t.querySelector("p").innerText);
-      shoeDetails.querySelector("#priceTag").innerText = t.querySelector(
-        "h3"
-      ).innerText;
-      shoeDetails.querySelector("#shoeName").innerText = t.querySelector(
-        "p"
-      ).innerText;
-      coverPic.src = t.querySelector("img").src;
-      coverPrice.innerText = t.querySelector("h3").innerText;
-      coverName.innerText = t.querySelector("p").innerText;
+
+      priceTag.innerText = t.querySelector("h3").innerText;
+      shoeName.innerText = t.querySelector("p").innerText;
+
+      const same = () => {
+        coverPic.src = t.querySelector("img").src;
+        coverPrice.innerText = t.querySelector("h3").innerText;
+        coverName.innerText = t.querySelector("p").innerText;
+      };
+      same();
+      cover.onclick = () => {
+        same();
+      };
     };
   }
+
+  let cover = document.querySelector(".cover");
+
+  cover.onclick = e => {
+    console.log(cover);
+    cP = coverPic.src;
+    priceT = coverPrice.innerText;
+    name = coverName.innerText;
+
+    let t = e.target.closest(".coverContent");
+    shoeDetails.style.transform = "translate(100%)";
+    priceTag.innerText = t.querySelector("h3").innerText;
+    shoeName.innerText = t.querySelector("p").innerText;
+  };
 
   cancel.onclick = () => {
     shoeDetails.style.transform = "translate(0%)";
