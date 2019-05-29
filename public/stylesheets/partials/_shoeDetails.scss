@@ -43,32 +43,44 @@
     font-size: 1.5vw;
   }
   select {
-    padding: 1vw;
-    width: 10vw;
     background: none;
-    //margin-right: 2vw;
+    color: black;
+    border: 1px solid black;
+    //appearance: none;
+    height: 4vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    font-weight: bold;
   }
 }
 
 #amount {
   display: flex;
   align-items: center;
+  // width: 50%;
+  // border: 1px solid black;
   p {
-    line-height: 4vmin;
+    // line-height: 5vmin;
     padding: 1vw 1vw 0.5vw 1vw;
+    // border: 1px solid black;
   }
   button {
-    @include btnStyles(auto, auto, 1px, rgb(102, 102, 102), 4vmin);
-    padding: 0.5vw 1vw 0.5vw 1vw;
+    @include btnStyles(4vw, 4vw, 1px, rgb(0, 0, 0), 4vmin);
+    //padding: 0.5vw 1vw 0.5vw 1vw;
+    //border: none;
+    background: none;
+    color: rgb(0, 0, 0);
   }
 }
 
 #addToBag {
-  @include btnStyles(auto, auto, 1px, rgb(0, 0, 0), 2.5vmin);
+  @include btnStyles(80%, 4vw, 1px, rgb(0, 0, 0), 2.5vmin);
   padding: 1vw 2vw 1vw 2vw;
   transition: 0.5s;
+  background: none;
+  color: rgb(0, 0, 0);
   &:hover {
     background: black;
-    color: white;
+    color: rgb(255, 255, 255);
   }
 }

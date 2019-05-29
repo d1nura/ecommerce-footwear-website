@@ -184,7 +184,7 @@
 }
 
 #box3 {
-  background: #f3f3f5;
+  background: #e6f3ba;
 }
 
 #box3 p,
@@ -381,9 +381,13 @@
 }
 
 .flexDiv select {
-  padding: 1vw;
-  width: 10vw;
   background: none;
+  color: black;
+  border: 1px solid black;
+  height: 4vw;
+  padding: 1vw;
+  font-size: 1.5vw;
+  font-weight: bold;
 }
 
 #amount {
@@ -396,24 +400,24 @@
 }
 
 #amount p {
-  line-height: 4vmin;
   padding: 1vw 1vw 0.5vw 1vw;
 }
 
 #amount button {
-  width: auto;
-  height: auto;
+  width: 4vw;
+  height: 4vw;
   font-size: 4vmin;
-  border: 1px solid #666666;
+  border: 1px solid black;
   background: none;
   outline: none;
   cursor: pointer;
-  padding: 0.5vw 1vw 0.5vw 1vw;
+  background: none;
+  color: black;
 }
 
 #addToBag {
-  width: auto;
-  height: auto;
+  width: 80%;
+  height: 4vw;
   font-size: 2.5vmin;
   border: 1px solid black;
   background: none;
@@ -422,6 +426,8 @@
   padding: 1vw 2vw 1vw 2vw;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background: none;
+  color: black;
 }
 
 #addToBag:hover {
