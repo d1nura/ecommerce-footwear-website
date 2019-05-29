@@ -3,13 +3,14 @@
 @import "../partials/footer";
 @import "../partials/shoeBoxes";
 @import "../partials/cover";
+@import "../partials/shoeDetails";
 
 .container {
   width: 100vw;
   height: 100vh;
   position: fixed;
   //border: 1px solid red;
-  background: rgb(255, 217, 0);
+  background: #ffc750;
   //padding: 2vw;
   display: flex;
   align-items: center;
@@ -26,5 +27,5 @@
   grid-template-columns: 5% 45% 45% 5%;
   grid-template-rows: 100%;
   overflow: hidden;
-  box-shadow: 5px 5px 1rem 1px rgb(255, 252, 163);
+  //box-shadow: 5px 5px 1rem 1px rgb(255, 252, 163);
 }

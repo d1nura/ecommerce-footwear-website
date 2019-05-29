@@ -18,7 +18,7 @@
           transform: translateX(-90%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: 10;
+  z-index: 11;
   background: white;
 }
 
@@ -133,6 +133,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0;
+  font-weight: bold;
 }
 
 .box:hover {
@@ -156,23 +157,33 @@
 }
 
 #box1 {
-  background: #936cff;
+  background: #d7c4eb;
 }
 
 #box2 {
-  background: #ff826c;
+  background: #ffeeb1;
+}
+
+#box2 p,
+#box2 h3 {
+  color: #838383;
 }
 
 #box3 {
-  background: #ff6c98;
+  background: #f3f3f5;
+}
+
+#box3 p,
+#box3 h3 {
+  color: #838383;
 }
 
 #box4 {
-  background: #d863f0;
+  background: #ffced3;
 }
 
 .arrows {
-  background: white;
+  background: #f3f3f5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,8 +222,9 @@
 
 .cover {
   position: relative;
-  background: cyan;
+  background: #b6e4fb;
   cursor: pointer;
+  z-index: 10;
 }
 
 .coverContent {
@@ -231,11 +243,13 @@
 }
 
 .coverContent img {
+  position: relative;
   width: 45vw;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  left: 5%;
 }
 
 .coverContent h3 {
@@ -268,6 +282,7 @@
   font-size: 3vmin;
   -webkit-transform: translateY(-40%);
           transform: translateY(-40%);
+  font-weight: bold;
 }
 
 .coverContent:hover h3 {
@@ -286,11 +301,92 @@
           transform: rotate(45deg);
 }
 
+.shoeDetails {
+  width: calc(96vw * 45 / 100);
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  background: #f3f3f5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#cancel {
+  width: 4vmin;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2vw;
+  cursor: pointer;
+}
+
+.flexDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 25vw;
+}
+
+.flexDiv select {
+  padding: 1vw;
+  width: 10vw;
+  background: none;
+}
+
+#amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#amount button {
+  width: auto;
+  height: auto;
+  font-size: 4vmin;
+  border: 1px solid red;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+}
+
+#addToBag {
+  width: auto;
+  height: auto;
+  font-size: 2.5vmin;
+  border: 1px solid red;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1vw 2vw 1vw 2vw;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: #ffd900;
+  background: #ffc750;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +410,5 @@
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
   overflow: hidden;
-  -webkit-box-shadow: 5px 5px 1rem 1px #fffca3;
-          box-shadow: 5px 5px 1rem 1px #fffca3;
 }
 /*# sourceMappingURL=index.css.map */

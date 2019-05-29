@@ -5,3 +5,19 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+@mixin centerDivs() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btnStyles($width, $height, $borderSize, $borderClr, $font) {
+  width: $width;
+  height: $height;
+  font-size: $font;
+  border: $borderSize solid $borderClr;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}

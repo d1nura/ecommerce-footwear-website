@@ -8,7 +8,7 @@ export function setData() {
   fetch("/data.json")
     .then(res => res.json())
     .then(data => {
-      console.log(data[0][0]);
+      //console.log(data[0][0]);
       selectCover(0, data);
       selectShowBoxes(0, data);
       let no = 0;

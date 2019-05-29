@@ -45,6 +45,7 @@
     padding: 0 1.5vw 0 1.5vw;
     transition: 0.5s;
     opacity: 0;
+    font-weight: bold;
     //@warn border: 1px solid red;
   }
   &:hover {
@@ -63,24 +64,32 @@
 }
 
 #box1 {
-  background: rgb(147, 108, 255);
+  background: #d7c4eb;
 }
 
 #box2 {
-  background: rgb(255, 130, 108);
+  background: #ffeeb1;
+  p,
+  h3 {
+    color: rgb(131, 131, 131);
+  }
 }
 
 #box3 {
-  background: rgb(255, 108, 152);
+  background: #f3f3f5;
+  p,
+  h3 {
+    color: rgb(131, 131, 131);
+  }
 }
 
 #box4 {
-  background: rgb(216, 99, 240);
+  background: #ffced3;
 }
 
 .arrows {
   //border: 1px solid magenta;
-  background: rgb(255, 255, 255);
+  background: #f3f3f5;
   display: flex;
   align-items: center;
   justify-content: center;

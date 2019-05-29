@@ -9,9 +9,9 @@ body
 
             .cover 
                 .coverContent
-                    img
-                    h3
-                    p
+                    img#coverPic
+                    h3#coverPrice
+                    p#coverName
               
             .shoeBoxes
                 #boxContent 
@@ -24,6 +24,8 @@ body
                     img#leftArrow(src="/images/icons/left-arrow.svg")
                     p #[sup 1]/#[sub 3]
                     img#rightArrow(src="/images/icons/right-arrow.svg")
+
+                include includes/shoeDetails.pug    
 
             include includes/footer.pug        
 
