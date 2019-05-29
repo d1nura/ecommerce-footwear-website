@@ -1,11 +1,39 @@
 .footer {
   position: relative;
+  //border: 1px solid rgb(66, 65, 65);
+  background: rgb(255, 255, 255);
+  z-index: 21;
   #shoppingBag {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @extend %iconStyles;
     width: 2.5vw;
-    cursor: pointer;
-    transform: translate(-50%, -100%);
   }
+}
+
+%iconStyles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -100%);
+  z-index: 21;
+  transition: 0.5s;
+}
+
+#shpClose {
+  @extend %iconStyles;
+  width: 2vw;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+}
+
+.shpToggle {
+  #shpClose {
+    transform: translate(-50%, -100%);
+    opacity: 1;
+  }
+  #shoppingBag {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+  }
+  //background: red;
 }
