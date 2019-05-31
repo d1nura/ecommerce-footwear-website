@@ -105,11 +105,12 @@
   }
 
   #remove {
-    @include btnStyles(5vw, 2vw, 1px, black, 1vw);
+    @include btnStyles(6.5vw, 2vw, 1px, rgb(0, 0, 0), 1vw);
     transform: rotate(90deg);
     transition: 0.2s;
-    background: black;
-    color: white;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.2vw;
     &:hover {
       background: rgb(255, 255, 255);
       color: rgb(0, 0, 0);

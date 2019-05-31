@@ -601,7 +601,7 @@
 }
 
 #itemDiv #remove {
-  width: 5vw;
+  width: 6.5vw;
   height: 2vw;
   font-size: 1vw;
   border: 1px solid black;
@@ -614,6 +614,7 @@
   transition: 0.2s;
   background: black;
   color: white;
+  letter-spacing: 0.2vw;
 }
 
 #itemDiv #remove:hover {

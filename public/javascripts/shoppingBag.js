@@ -1,3 +1,5 @@
+import { shoppingItems } from "./shoppingItems.js";
+
 export function shoppingBag() {
   console.log("shoppingBag");
   let shpBag = document.querySelector("#shoppingBag");
@@ -9,6 +11,7 @@ export function shoppingBag() {
     console.log("shpBag");
     shpDiv.style.transform = "translateX(0%)";
     footer.classList.toggle("shpToggle");
+    shoppingItems();
   };
 
   shpClose.onclick = () => {

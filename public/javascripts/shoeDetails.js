@@ -8,7 +8,6 @@ export function shoeDetails() {
   let inc = document.querySelector("#inc");
   let no = document.querySelector("#no");
   let addBag = document.querySelector("#addToBag");
-  let c = document.querySelector("#cancel");
 
   dec.onclick = () => {
     if (parseInt(no.innerText) !== 1) {

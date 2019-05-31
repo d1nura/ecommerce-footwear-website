@@ -30,13 +30,13 @@ export function addToBag() {
     <div>
       <div id="itemNames">
         <h2>${obj[1]}</h2>
-        <p>${obj[2]}</p>
+        <p class="itmPrice">${obj[2]}</p>
       </div>
       <div id="amountSelect"> 
         <div id="amount">
-          <button id="inc">-</button>
+          <button id="dec">-</button>
           <p id="no">${obj[4]}</p>
-          <button id="dec">+</button>
+          <button id="inc">+</button>
         </div>  
         <select>
           <option>6</option>
