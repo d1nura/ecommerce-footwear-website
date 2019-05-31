@@ -62,7 +62,7 @@
     // border: 1px solid mediumblue;
   }
   h2 {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     //font-weight: 100;
   }
   overflow-y: scroll;
@@ -92,13 +92,15 @@
     margin-left: 2.5vw;
     p {
       line-height: 2vw;
-      padding: 0 0.5vw 0 0.5vw;
-      font-size: 1vw;
+      padding: 0 1vw 0 1vw;
+      font-size: 1.3vw;
     }
     select {
       margin-left: 1.5vw;
       border: 1px solid black;
       background: none;
+      height: 2.2vw;
+      font-size: 1.3vw;
     }
   }
 
@@ -116,7 +118,7 @@
 
   #amount {
     button {
-      @include btnStyles(2vw, 2vw, 1px, black, 1vw);
+      @include btnStyles(2.2vw, 2.2vw, 1px, black, 1.5vw);
     }
   }
 }

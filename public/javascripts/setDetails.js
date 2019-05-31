@@ -1,3 +1,6 @@
+import { removeDollar } from "./removeDollar.js";
+export let priceArr;
+
 export function setDetails() {
   console.log("setDetails");
   let box = document.querySelectorAll(".box");
@@ -6,7 +9,6 @@ export function setDetails() {
   let cover = document.querySelector(".cover");
   let coverContent = document.querySelector(".coverContent");
   let no = document.querySelector("#no");
-  //let shoeName = shoeDetails.querySelector("#shoeName");
 
   for (let i = 0; i < box.length; i++) {
     box[i].onclick = e => {
@@ -25,6 +27,9 @@ export function setDetails() {
       ).innerText;
       coverPic.src = t.querySelector("#boxImg").src;
 
+      priceArr = removeDollar(t.querySelector("#boxPrice").innerText);
+      //console.log(t.querySelector("#boxPrice").innerText);
+
       cancel.onclick = () => {
         shoeDetails.style.transform = "translate(0)";
         no.innerText = 1;
@@ -40,6 +45,8 @@ export function setDetails() {
 
     shoeName.innerText = coverName.innerText;
     priceTag.innerText = coverPrice.innerText;
+
+    priceArr = removeDollar(coverPrice.innerText);
 
     cancel.onclick = () => {
       shoeDetails.style.transform = "translate(0)";

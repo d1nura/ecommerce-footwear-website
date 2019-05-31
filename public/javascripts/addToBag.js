@@ -2,7 +2,7 @@ let i = 0;
 let map = new Map();
 
 export function addToBag() {
-  console.log("addtobag");
+  // console.log("addtobag");
   let number = document.querySelector("#no");
 
   localStorage.setItem(`item${i}`, [
@@ -13,13 +13,13 @@ export function addToBag() {
     number.innerText
   ]);
 
-  console.log(number.innerText);
+  //console.log(number.innerText);
 
   for (let i of Object.keys(localStorage)) {
     map.set(i, i);
   }
   let obj = localStorage.getItem(map.get(`item${i}`)).split(",");
-  console.log(obj[4]);
+  // console.log(obj[4]);
 
   let itemDiv = document.createElement("div");
   let shpItems = document.querySelector(".shoppingItems");

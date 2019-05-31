@@ -1,5 +1,6 @@
 import { removeDollar } from "./removeDollar.js";
 import { addToBag } from "./addToBag.js";
+import { priceArr } from "./setDetails.js";
 
 export function shoeDetails() {
   console.log("shoeDetails");
@@ -7,24 +8,19 @@ export function shoeDetails() {
   let inc = document.querySelector("#inc");
   let no = document.querySelector("#no");
   let addBag = document.querySelector("#addToBag");
-
-  const priceArr = [];
+  let c = document.querySelector("#cancel");
 
   dec.onclick = () => {
     if (parseInt(no.innerText) !== 1) {
       no.innerText = parseInt(no.innerText) - 1;
       priceTag.innerText =
-        "$" + (removeDollar(priceTag.innerText) - priceArr[0]).toFixed(2);
+        "$" + (removeDollar(priceTag.innerText) - priceArr).toFixed(2);
     }
-    console.log(priceArr);
   };
 
   inc.onclick = () => {
-    priceArr.push(removeDollar(priceTag.innerText));
     no.innerText = parseInt(no.innerText) + 1;
-    priceTag.innerText =
-      "$" + (priceArr[0] * parseInt(no.innerText)).toFixed(2);
-    console.log(priceArr);
+    priceTag.innerText = "$" + (priceArr * parseInt(no.innerText)).toFixed(2);
   };
 
   addBag.onclick = () => {

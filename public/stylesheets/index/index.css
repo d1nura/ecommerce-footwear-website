@@ -554,7 +554,7 @@
 }
 
 .shoppingItems h2 {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
 }
 
 #itemDiv {
@@ -588,14 +588,16 @@
 
 #itemDiv #amountSelect p {
   line-height: 2vw;
-  padding: 0 0.5vw 0 0.5vw;
-  font-size: 1vw;
+  padding: 0 1vw 0 1vw;
+  font-size: 1.3vw;
 }
 
 #itemDiv #amountSelect select {
   margin-left: 1.5vw;
   border: 1px solid black;
   background: none;
+  height: 2.2vw;
+  font-size: 1.3vw;
 }
 
 #itemDiv #remove {
@@ -620,9 +622,9 @@
 }
 
 #itemDiv #amount button {
-  width: 2vw;
-  height: 2vw;
-  font-size: 1vw;
+  width: 2.2vw;
+  height: 2.2vw;
+  font-size: 1.5vw;
   border: 1px solid black;
   background: none;
   outline: none;
