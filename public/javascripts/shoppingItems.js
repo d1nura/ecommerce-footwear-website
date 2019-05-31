@@ -72,6 +72,9 @@ export function shoppingItems() {
       };
     }
 
-    //console.log(totalPrice.innerText);
+    clearCart.onclick = () => {
+      shoppingItems.innerHTML = "";
+      totalPrice.innerText = "0.00";
+    };
   }
 }
