@@ -5,6 +5,7 @@ export function setDetails() {
   let cancel = document.querySelector("#cancel");
   let cover = document.querySelector(".cover");
   let coverContent = document.querySelector(".coverContent");
+  let no = document.querySelector("#no");
   //let shoeName = shoeDetails.querySelector("#shoeName");
 
   for (let i = 0; i < box.length; i++) {
@@ -26,6 +27,7 @@ export function setDetails() {
 
       cancel.onclick = () => {
         shoeDetails.style.transform = "translate(0)";
+        no.innerText = 1;
         coverPic.src = cPic;
         coverName.innerText = cName;
         coverPrice.innerText = cPrice;
@@ -41,6 +43,7 @@ export function setDetails() {
 
     cancel.onclick = () => {
       shoeDetails.style.transform = "translate(0)";
+      no.innerText = 1;
     };
   };
 }

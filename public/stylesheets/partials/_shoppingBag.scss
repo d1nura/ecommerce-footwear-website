@@ -1,7 +1,6 @@
 .shoppingBag {
   position: absolute;
   right: 5%;
-  //border: 1px solid red;
   width: calc(96vw * 45 / 100);
   height: 100%;
   transform: translateX(100%);
@@ -16,18 +15,18 @@
 .clearCart {
   position: relative;
   //border: 1px solid red;
-  background: #ffe3e1;
+  background: #000000;
   @include centerDivs();
   justify-content: space-between;
   padding: 1.2vw 2vw 1.2vw 2vw;
   h3 {
     font-size: 1.8vw;
-    color: rgb(255, 151, 151);
+    color: rgb(255, 255, 255);
   }
   p {
     font-size: 1.2vw;
     cursor: pointer;
-    color: rgb(255, 133, 133);
+    color: rgb(224, 224, 224);
     font-weight: bold;
     transition: 0.2s;
   }
@@ -42,35 +41,82 @@
   position: relative;
   padding: 1.2vw 2vw 1.2vw 2vw;
   //border: 1px solid red;
+  font-size: 1.4vw;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: rgb(255, 153, 153);
+  background: rgb(104, 104, 104);
   color: rgb(255, 255, 255);
   transition: 0.2s;
   &:hover {
-    background: rgb(255, 24, 55);
+    background: rgb(77, 106, 238);
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
 }
 
 .shoppingItems {
-  img {
-    width: 5vw;
+  #shoePicS {
+    width: 6vw;
     transform: rotate(45deg);
+    // border: 1px solid mediumblue;
   }
   h2 {
-    font-size: 1.8vw;
+    font-size: 1.2vw;
+    //font-weight: 100;
   }
-
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
 
 #itemDiv {
-  //display: flex;
-  border: 1px solid blueviolet;
+  border-bottom: 1px solid rgb(179, 179, 179);
   padding: 1.2vw 2vw 1.2vw 2vw;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+
+  #itemNames {
+    padding-left: 2.5vw;
+    p {
+      font-size: 1.5vw;
+      margin-top: 0.5vw;
+    }
+  }
+
+  #amountSelect {
+    display: flex;
+    margin-top: 0.8vw;
+    margin-left: 2.5vw;
+    p {
+      line-height: 2vw;
+      padding: 0 0.5vw 0 0.5vw;
+      font-size: 1vw;
+    }
+    select {
+      margin-left: 1.5vw;
+      border: 1px solid black;
+      background: none;
+    }
+  }
+
+  #remove {
+    @include btnStyles(5vw, 2vw, 1px, black, 1vw);
+    transform: rotate(90deg);
+    transition: 0.2s;
+    background: black;
+    color: white;
+    &:hover {
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  #amount {
+    button {
+      @include btnStyles(2vw, 2vw, 1px, black, 1vw);
+    }
+  }
 }

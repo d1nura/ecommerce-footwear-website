@@ -487,7 +487,7 @@
 
 .clearCart {
   position: relative;
-  background: #ffe3e1;
+  background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,13 +505,13 @@
 
 .clearCart h3 {
   font-size: 1.8vw;
-  color: #ff9797;
+  color: white;
 }
 
 .clearCart p {
   font-size: 1.2vw;
   cursor: pointer;
-  color: #ff8585;
+  color: #e0e0e0;
   font-weight: bold;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -524,40 +524,109 @@
 .checkout {
   position: relative;
   padding: 1.2vw 2vw 1.2vw 2vw;
+  font-size: 1.4vw;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: #ff9999;
+  background: #686868;
   color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .checkout:hover {
-  background: #ff1837;
+  background: #4d6aee;
   color: white;
   cursor: pointer;
 }
 
 .shoppingItems {
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
 
-.shoppingItems img {
-  width: 5vw;
+.shoppingItems #shoePicS {
+  width: 6vw;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .shoppingItems h2 {
-  font-size: 1.8vw;
+  font-size: 1.2vw;
 }
 
 #itemDiv {
-  border: 1px solid blueviolet;
+  border-bottom: 1px solid #b3b3b3;
   padding: 1.2vw 2vw 1.2vw 2vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#itemDiv #itemNames {
+  padding-left: 2.5vw;
+}
+
+#itemDiv #itemNames p {
+  font-size: 1.5vw;
+  margin-top: 0.5vw;
+}
+
+#itemDiv #amountSelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.8vw;
+  margin-left: 2.5vw;
+}
+
+#itemDiv #amountSelect p {
+  line-height: 2vw;
+  padding: 0 0.5vw 0 0.5vw;
+  font-size: 1vw;
+}
+
+#itemDiv #amountSelect select {
+  margin-left: 1.5vw;
+  border: 1px solid black;
+  background: none;
+}
+
+#itemDiv #remove {
+  width: 5vw;
+  height: 2vw;
+  font-size: 1vw;
+  border: 1px solid black;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: black;
+  color: white;
+}
+
+#itemDiv #remove:hover {
+  background: white;
+  color: black;
+}
+
+#itemDiv #amount button {
+  width: 2vw;
+  height: 2vw;
+  font-size: 1vw;
+  border: 1px solid black;
+  background: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .container {

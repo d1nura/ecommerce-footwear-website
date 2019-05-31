@@ -16,6 +16,7 @@ export function shoeDetails() {
       priceTag.innerText =
         "$" + (removeDollar(priceTag.innerText) - priceArr[0]).toFixed(2);
     }
+    console.log(priceArr);
   };
 
   inc.onclick = () => {
@@ -23,6 +24,7 @@ export function shoeDetails() {
     no.innerText = parseInt(no.innerText) + 1;
     priceTag.innerText =
       "$" + (priceArr[0] * parseInt(no.innerText)).toFixed(2);
+    console.log(priceArr);
   };
 
   addBag.onclick = () => {
