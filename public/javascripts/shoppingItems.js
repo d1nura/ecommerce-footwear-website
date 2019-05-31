@@ -6,15 +6,14 @@ export function shoppingItems() {
   let inc = shoppingItems.querySelectorAll("#inc");
   let dec = shoppingItems.querySelectorAll("#dec");
   let itemPrice = document.querySelectorAll(".itmPrice");
+  let remove = document.querySelectorAll("#remove");
 
   if (shoppingItems.children.length > 0) {
-    console.log(itemDiv);
     let tp = [];
 
     for (let i = 0; i < shoppingItems.children.length; i++) {
       let oPArr = [];
       inc[i].onclick = e => {
-        console.log("inc");
         let it = e.target.closest("#itemDiv");
         let oPrice =
           removeDollar(it.querySelector(".itmPrice").innerText) /
@@ -28,18 +27,18 @@ export function shoppingItems() {
           "$" +
           (oPArr[0] * parseInt(it.querySelector("#no").innerText)).toFixed(2);
 
-        //totalPrice.innerText =
+        totalPrice.innerText = (
+          parseFloat(totalPrice.innerText) + oPArr[0]
+        ).toFixed(2);
       };
 
       dec[i].onclick = e => {
-        console.log(e.target.value);
         let it = e.target.closest("#itemDiv");
         let oPrice =
           removeDollar(it.querySelector(".itmPrice").innerText) /
           parseInt(it.querySelector("#no").innerText);
         oPArr.push(oPrice);
 
-        console.log(oPArr);
         if (it.querySelector("#no").innerText > 1) {
           it.querySelector("#no").innerText =
             parseInt(it.querySelector("#no").innerText) - 1;
@@ -49,15 +48,28 @@ export function shoppingItems() {
             (
               removeDollar(it.querySelector(".itmPrice").innerText) - oPArr[0]
             ).toFixed(2);
+
+          totalPrice.innerText = (
+            parseFloat(totalPrice.innerText) - oPArr[0]
+          ).toFixed(2);
         }
       };
 
       tp.push(removeDollar(itemPrice[i].innerText));
-      console.log(tp);
 
       totalPrice.innerText = tp.reduce((p, n) => {
         return (parseFloat(p) + parseFloat(n)).toFixed(2);
       });
+
+      remove[i].onclick = e => {
+        shoppingItems.removeChild(e.target.closest("#itemDiv"));
+        totalPrice.innerText = (
+          parseFloat(totalPrice.innerText) -
+          removeDollar(
+            e.target.closest("#itemDiv").querySelector(".itmPrice").innerText
+          )
+        ).toFixed(2);
+      };
     }
 
     //console.log(totalPrice.innerText);
