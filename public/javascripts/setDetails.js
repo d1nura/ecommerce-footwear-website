@@ -3,42 +3,44 @@ export function setDetails() {
   let box = document.querySelectorAll(".box");
   let shoeDetails = document.querySelector(".shoeDetails");
   let cancel = document.querySelector("#cancel");
+  let cover = document.querySelector(".cover");
   let coverContent = document.querySelector(".coverContent");
-
-  let cP, name, priceT;
+  //let shoeName = shoeDetails.querySelector("#shoeName");
 
   for (let i = 0; i < box.length; i++) {
     box[i].onclick = e => {
-      cP = coverContent.querySelector("#coverPic").src;
-      name = coverContent.querySelector("#coverName").innerText;
-      priceT = coverContent.querySelector("#coverPrice").innerText;
+      let cPic = coverContent.querySelector("#coverPic").src;
+      let cPrice = coverContent.querySelector("#coverPrice").innerText;
+      let cName = coverContent.querySelector("#coverName").innerText;
 
-      shoeDetails.style.transform = "translate(100%)";
+      shoeDetails.style.transform = "translateX(100%)";
+
       let t = e.target.closest(".box");
+      shoeName.innerText = coverName.innerText = t.querySelector(
+        "#boxTitle"
+      ).innerText;
+      priceTag.innerText = coverPrice.innerText = t.querySelector(
+        "#boxPrice"
+      ).innerText;
+      coverPic.src = t.querySelector("#boxImg").src;
 
-      priceTag.innerText = t.querySelector("h3").innerText;
-      shoeName.innerText = t.querySelector("p").innerText;
-
-      coverPic.src = t.querySelector("img").src;
-      coverPrice.innerText = t.querySelector("h3").innerText;
-      coverName.innerText = t.querySelector("p").innerText;
+      cancel.onclick = () => {
+        shoeDetails.style.transform = "translate(0)";
+        coverPic.src = cPic;
+        coverName.innerText = cName;
+        coverPrice.innerText = cPrice;
+      };
     };
   }
 
-  let cover = document.querySelector(".cover");
+  cover.onclick = () => {
+    shoeDetails.style.transform = "translateX(100%)";
 
-  cover.onclick = e => {
-    console.log(cover);
-    let t = e.target.closest(".coverContent");
-    shoeDetails.style.transform = "translate(100%)";
-    priceTag.innerText = t.querySelector("h3").innerText;
-    shoeName.innerText = t.querySelector("p").innerText;
-  };
+    shoeName.innerText = coverName.innerText;
+    priceTag.innerText = coverPrice.innerText;
 
-  cancel.onclick = () => {
-    shoeDetails.style.transform = "translate(0%)";
-    coverPic.src = cP;
-    coverPrice.innerText = priceT;
-    coverName.innerText = name;
+    cancel.onclick = () => {
+      shoeDetails.style.transform = "translate(0)";
+    };
   };
 }

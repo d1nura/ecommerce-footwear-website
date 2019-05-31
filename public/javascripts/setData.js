@@ -44,9 +44,9 @@ function selectShowBoxes(x, data) {
 
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].innerHTML = `
-      <img src="${data[x][i + 1].pic}"/>
-      <h3>${data[x][i + 1].price}</h3>
-      <p>${data[x][i + 1].title}</p>
+      <img id="boxImg" src="${data[x][i + 1].pic}"/>
+      <h3 id="boxPrice">${data[x][i + 1].price}</h3>
+      <p id="boxTitle">${data[x][i + 1].title}</p>
     `;
   }
 }

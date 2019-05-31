@@ -1,11 +1,76 @@
 .shoppingBag {
   position: absolute;
   right: 5%;
-  border: 1px solid red;
+  //border: 1px solid red;
   width: calc(96vw * 45 / 100);
   height: 100%;
   transform: translateX(100%);
-  background: white;
+  background: #f3f3f5;
   z-index: 15;
   transition: 0.5s;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 80% 10%;
+}
+
+.clearCart {
+  position: relative;
+  //border: 1px solid red;
+  background: #ffe3e1;
+  @include centerDivs();
+  justify-content: space-between;
+  padding: 1.2vw 2vw 1.2vw 2vw;
+  h3 {
+    font-size: 1.8vw;
+    color: rgb(255, 151, 151);
+  }
+  p {
+    font-size: 1.2vw;
+    cursor: pointer;
+    color: rgb(255, 133, 133);
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  &:hover {
+    p {
+      color: rgb(255, 0, 0);
+    }
+  }
+}
+
+.checkout {
+  position: relative;
+  padding: 1.2vw 2vw 1.2vw 2vw;
+  //border: 1px solid red;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgb(255, 153, 153);
+  color: rgb(255, 255, 255);
+  transition: 0.2s;
+  &:hover {
+    background: rgb(255, 24, 55);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+}
+
+.shoppingItems {
+  img {
+    width: 5vw;
+    transform: rotate(45deg);
+  }
+  h2 {
+    font-size: 1.8vw;
+  }
+
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+#itemDiv {
+  //display: flex;
+  border: 1px solid blueviolet;
+  padding: 1.2vw 2vw 1.2vw 2vw;
 }

@@ -469,15 +469,95 @@
 .shoppingBag {
   position: absolute;
   right: 5%;
-  border: 1px solid red;
   width: calc(96vw * 45 / 100);
   height: 100%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  background: white;
+  background: #f3f3f5;
   z-index: 15;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 10% 80% 10%;
+      grid-template-rows: 10% 80% 10%;
+}
+
+.clearCart {
+  position: relative;
+  background: #ffe3e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2vw 2vw 1.2vw 2vw;
+}
+
+.clearCart h3 {
+  font-size: 1.8vw;
+  color: #ff9797;
+}
+
+.clearCart p {
+  font-size: 1.2vw;
+  cursor: pointer;
+  color: #ff8585;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.clearCart:hover p {
+  color: red;
+}
+
+.checkout {
+  position: relative;
+  padding: 1.2vw 2vw 1.2vw 2vw;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #ff9999;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.checkout:hover {
+  background: #ff1837;
+  color: white;
+  cursor: pointer;
+}
+
+.shoppingItems {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+.shoppingItems img {
+  width: 5vw;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.shoppingItems h2 {
+  font-size: 1.8vw;
+}
+
+#itemDiv {
+  border: 1px solid blueviolet;
+  padding: 1.2vw 2vw 1.2vw 2vw;
 }
 
 .container {
