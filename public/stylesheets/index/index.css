@@ -115,6 +115,30 @@
   opacity: 0;
 }
 
+.shpToggle #cartNo {
+  opacity: 0;
+}
+
+#cartNo {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  text-align: center;
+  line-height: 2.5vw;
+  border-radius: 50%;
+  background: #e71d1d;
+  color: white;
+  opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-10%, -165%);
+          transform: translate(-10%, -165%);
+  font-size: 1.2vw;
+  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .shoeBoxes {
   display: -ms-grid;
   display: grid;
@@ -485,9 +509,15 @@
       grid-template-rows: 10% 80% 10%;
 }
 
+.shoppingBag #cartNo {
+  background: white;
+  width: 3vw;
+  position: absolute;
+}
+
 .clearCart {
   position: relative;
-  background: #000000;
+  background: #030303;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,15 +533,14 @@
   padding: 1.2vw 2vw 1.2vw 2vw;
 }
 
-.clearCart h3 {
-  font-size: 1.8vw;
-  color: white;
+.clearCart img {
+  width: 2.5vw;
 }
 
 .clearCart p {
   font-size: 1.2vw;
   cursor: pointer;
-  color: #e0e0e0;
+  color: #fdfbfb;
   font-weight: bold;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -528,7 +557,7 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: #686868;
+  background: #fac516;
   color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -572,7 +601,7 @@
 }
 
 #itemDiv #itemNames {
-  padding-left: 2.5vw;
+  padding-left: 3.5vw;
 }
 
 #itemDiv #itemNames p {
@@ -585,7 +614,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 0.8vw;
-  margin-left: 2.5vw;
+  margin-left: 3.5vw;
 }
 
 #itemDiv #amountSelect p {

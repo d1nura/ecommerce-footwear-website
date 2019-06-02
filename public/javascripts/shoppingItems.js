@@ -5,14 +5,17 @@ export function shoppingItems() {
   let shoppingItems = document.querySelector(".shoppingItems");
   let inc = shoppingItems.querySelectorAll("#inc");
   let dec = shoppingItems.querySelectorAll("#dec");
+  let num = shoppingItems.querySelectorAll("#no");
   let itemPrice = document.querySelectorAll(".itmPrice");
   let remove = document.querySelectorAll("#remove");
 
   if (shoppingItems.children.length > 0) {
     let tp = [];
+    let ct = [];
 
     for (let i = 0; i < shoppingItems.children.length; i++) {
       let oPArr = [];
+
       inc[i].onclick = e => {
         let it = e.target.closest("#itemDiv");
         let oPrice =
@@ -30,6 +33,10 @@ export function shoppingItems() {
         totalPrice.innerText = (
           parseFloat(totalPrice.innerText) + oPArr[0]
         ).toFixed(2);
+
+        console.log(cartNo.innerText);
+        cartNo.innerText = parseInt(cartNo.innerText) + 1;
+        localStorage.setItem("cartNo", cartNo.innerText);
       };
 
       dec[i].onclick = e => {
@@ -53,6 +60,8 @@ export function shoppingItems() {
             parseFloat(totalPrice.innerText) - oPArr[0]
           ).toFixed(2);
         }
+        cartNo.innerText = parseInt(cartNo.innerText) - 1;
+        localStorage.setItem("cartNo", cartNo.innerText);
       };
 
       tp.push(removeDollar(itemPrice[i].innerText));
@@ -69,12 +78,25 @@ export function shoppingItems() {
             e.target.closest("#itemDiv").querySelector(".itmPrice").innerText
           )
         ).toFixed(2);
+
+        cartNo.innerText =
+          parseInt(cartNo.innerText) -
+          parseInt(e.target.closest("#itemDiv").querySelector("#no").innerText);
+        localStorage.setItem("cartNo", cartNo.innerText);
       };
+
+      ct.push(num[i].innerText);
+      cartNo.innerText = ct.reduce((p, n) => {
+        return parseInt(p) + parseInt(n);
+      });
+      localStorage.setItem("cartNo", cartNo.innerText);
     }
 
     clearCart.onclick = () => {
       shoppingItems.innerHTML = "";
       totalPrice.innerText = "0.00";
+      cartNo.innerText = 0;
+      localStorage.setItem("cartNo", cartNo.innerText);
     };
   }
 }
