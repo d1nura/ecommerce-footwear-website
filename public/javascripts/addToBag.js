@@ -4,7 +4,7 @@ let map = new Map();
 export function addToBag() {
   // console.log("addtobag");
   let number = document.querySelector("#no");
-  console.log(cartNo);
+  // console.log(cartNo);
 
   localStorage.setItem(`item${i}`, [
     coverPic.src,
@@ -73,4 +73,6 @@ export function addToBag() {
     cartNo.style.display = "block";
   }
   i++;
+  let ad = document.querySelector("#addToBag");
+  // console.log(ad);
 }

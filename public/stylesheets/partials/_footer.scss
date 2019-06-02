@@ -22,7 +22,7 @@
 #shpClose {
   @extend %iconStyles;
   width: 2vw;
-  transform: translate(-50%, 0%);
+  transform: translate(150%, -100%);
   opacity: 0;
 }
 
@@ -32,7 +32,7 @@
     opacity: 1;
   }
   #shoppingBag {
-    transform: translate(-50%, -200%);
+    transform: translate(150%, -100%);
     opacity: 0;
   }
   #cartNo {
@@ -49,9 +49,9 @@
   text-align: center;
   line-height: 2.5vw;
   border-radius: 50%;
-  background: rgb(231, 29, 29);
+  background: rgb(255, 3, 121);
   color: white;
-  opacity: 0.5;
+  opacity: 1;
   top: 50%;
   left: 50%;
   transform: translate(-10%, -165%);

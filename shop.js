@@ -10,4 +10,12 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+app.get("/contacts", (req, res) => {
+  res.render("contacts");
+});
+
 app.listen(port, () => console.log(`listening on port ${port}`));

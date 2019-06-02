@@ -30,12 +30,15 @@ export function setDetails() {
       priceArr = removeDollar(t.querySelector("#boxPrice").innerText);
       //console.log(t.querySelector("#boxPrice").innerText);
 
+      cover.style.pointerEvents = "none";
+
       cancel.onclick = () => {
         shoeDetails.style.transform = "translate(0)";
         no.innerText = 1;
         coverPic.src = cPic;
         coverName.innerText = cName;
         coverPrice.innerText = cPrice;
+        cover.style.pointerEvents = "auto";
       };
     };
   }

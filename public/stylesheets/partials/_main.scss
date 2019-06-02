@@ -5,6 +5,9 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   user-select: none;
+  a {
+    text-decoration: none;
+  }
 }
 
 @mixin centerDivs() {
@@ -21,4 +24,31 @@
   background: none;
   outline: none;
   cursor: pointer;
+}
+
+@mixin main() {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    //border: 1px solid red;
+    background: #ffc750;
+    //padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    position: fixed;
+    // border: 2px solid rgb(0, 0, 0);
+    height: 92vh;
+    width: 96vw;
+    background: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-rows: 100%;
+    overflow: hidden;
+    //box-shadow: 5px 5px 1rem 1px rgb(255, 252, 163);
+  }
 }

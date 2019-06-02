@@ -59,9 +59,10 @@ export function shoppingItems() {
           totalPrice.innerText = (
             parseFloat(totalPrice.innerText) - oPArr[0]
           ).toFixed(2);
+
+          cartNo.innerText = parseInt(cartNo.innerText) - 1;
+          localStorage.setItem("cartNo", cartNo.innerText);
         }
-        cartNo.innerText = parseInt(cartNo.innerText) - 1;
-        localStorage.setItem("cartNo", cartNo.innerText);
       };
 
       tp.push(removeDollar(itemPrice[i].innerText));

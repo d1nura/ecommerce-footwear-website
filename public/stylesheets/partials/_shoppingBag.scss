@@ -45,15 +45,16 @@
   position: relative;
   padding: 1.2vw 2vw 1.2vw 2vw;
   //border: 1px solid red;
-  font-size: 1.4vw;
+  @include centerDivs();
+  font-size: 1.2vw;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: rgb(250, 197, 22);
-  color: rgb(255, 255, 255);
+  background: rgb(15, 15, 15);
+  color: rgb(99, 98, 98);
   transition: 0.2s;
   &:hover {
-    background: rgb(77, 106, 238);
+    background: rgb(27, 245, 19);
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
