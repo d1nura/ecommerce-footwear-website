@@ -443,4 +443,132 @@
       grid-template-rows: 100%;
   overflow: hidden;
 }
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f3f3f3;
+}
+
+.contact h1 {
+  margin-bottom: 2vw;
+  font-size: 4vw;
+  color: black;
+}
+
+.contact input,
+.contact textarea {
+  width: 60%;
+  padding: 0.5vw;
+  margin-bottom: 2vw;
+  border-radius: 0.5vw;
+  border: 1px solid #b1b1b1;
+  font-size: 1vw;
+  outline: none;
+  color: #ff0062;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border: 1px solid #e92386;
+}
+
+.contact input::-webkit-input-placeholder,
+.contact textarea::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+
+.contact input:-ms-input-placeholder,
+.contact textarea:-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+.contact input::-ms-input-placeholder,
+.contact textarea::-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #b8b8b8;
+}
+
+.contact textarea {
+  height: 10vw;
+  resize: none;
+}
+
+.contact input {
+  height: 3.5vw;
+}
+
+.contact #submit {
+  background: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.address {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 40% 60%;
+      grid-template-rows: 40% 60%;
+}
+
+.address #addContent {
+  background: black;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.address #addContent div {
+  padding-left: 4vw;
+}
+
+.address #addContent h4 {
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
+  color: #ff0062;
+}
+
+.address #addContent p {
+  font-size: 1vw;
+  color: #b4b4b4;
+}
+
+#addPic {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#addPic img {
+  width: 20vw;
+}
 /*# sourceMappingURL=contact.css.map */

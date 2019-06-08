@@ -6,8 +6,32 @@ body
     .container
         .content
             include includes/menu.pug
-            div
-            div
+            .address
+                #addPic
+                    img(src="/images/shoesPics/13.png")
+                #addContent
+                    div
+                        h4 OFFICE
+                        p 4370, Rossenberg 7,#[br] Bercastle
+                    div    
+                        h4 CONTACT
+                        p 1232-576-909
+                        p dailym@yahoo.com
+
+                    div
+                        h4 BUSINESS DEVELOPMENT
+                        p hamilhr@gmail.com
+
+                    div
+                        h4 SALES
+                        p  whichone@gmail.com  
+
+            .contact
+                h1 Contact Us
+                input(placeholder="Name") 
+                input(placeholder="Email")
+                textarea(placeholder="Message")
+                input#submit(type="submit")
             include includes/footer.pug
             include includes/shoppingBag.pug        
 

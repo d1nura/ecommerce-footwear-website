@@ -80,12 +80,25 @@ export function shoppingItems() {
           )
         ).toFixed(2);
 
+        //console.log(Object.keys(localStorage));
+        for (let j = 0; j < localStorage.length * 2; j++) {
+          if (localStorage.getItem(`item${j}`)) {
+            if (
+              localStorage.getItem(`item${j}`).split(",")[0] ==
+              e.target.closest("#itemDiv").querySelector("span").innerText
+            ) {
+              console.log(j);
+              localStorage.removeItem(`item${j}`);
+            }
+          }
+        }
+
         cartNo.innerText =
           parseInt(localStorage.getItem("cartNo")) -
           parseInt(e.target.closest("#itemDiv").querySelector("#no").innerText);
         localStorage.setItem("cartNo", cartNo.innerText);
 
-        console.log(localStorage.getItem(`item${i}`));
+        //console.log(localStorage.getItem(`item${i}`));
       };
 
       ct.push(num[i].innerText);
@@ -100,6 +113,11 @@ export function shoppingItems() {
       totalPrice.innerText = "0.00";
       cartNo.innerText = 0;
       localStorage.setItem("cartNo", cartNo.innerText);
+      for (let l = 0; l < localStorage.length * 2; l++) {
+        if (localStorage.getItem(`item${l}`)) {
+          localStorage.removeItem(`item${l}`);
+        }
+      }
     };
   }
 }

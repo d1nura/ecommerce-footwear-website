@@ -26,9 +26,10 @@ export function setDetails() {
         "#boxPrice"
       ).innerText;
       coverPic.src = t.querySelector("#boxImg").src;
+      hID.innerText = t.querySelector("span").innerText;
+      //console.log(hID);
 
       priceArr = removeDollar(t.querySelector("#boxPrice").innerText);
-      //console.log(t.querySelector("#boxPrice").innerText);
 
       cover.style.pointerEvents = "none";
 
@@ -48,6 +49,8 @@ export function setDetails() {
 
     shoeName.innerText = coverName.innerText;
     priceTag.innerText = coverPrice.innerText;
+    hID.innerText = hId.innerText;
+    //console.log(hId);
 
     priceArr = removeDollar(coverPrice.innerText);
 

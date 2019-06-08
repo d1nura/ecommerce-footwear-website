@@ -4,16 +4,17 @@ export function shoppingItemsLoad(obj) {
   itemDiv.setAttribute("id", "itemDiv");
   shpItems.appendChild(itemDiv);
   itemDiv.innerHTML = `
-        <img id="shoePicS" src='${obj[0]}'/s>
+        <span style="display:none">${obj[0]}</span>
+        <img id="shoePicS" src='${obj[1]}'/s>
         <div>
           <div id="itemNames">
-            <h2>${obj[1]}</h2>
-            <p class="itmPrice">${obj[2]}</p>
+            <h2>${obj[2]}</h2>
+            <p class="itmPrice">${obj[3]}</p>
           </div>
           <div id="amountSelect"> 
             <div id="amount">
               <button id="dec">-</button>
-              <p id="no">${obj[4]}</p>
+              <p id="no">${obj[5]}</p>
               <button id="inc">+</button>
             </div>  
             <select>
@@ -38,5 +39,5 @@ export function shoppingItemsLoad(obj) {
         </div>
         <button id="remove">remove</button>
       `;
-  itemDiv.querySelector("select").value = obj[3];
+  itemDiv.querySelector("select").value = obj[4];
 }

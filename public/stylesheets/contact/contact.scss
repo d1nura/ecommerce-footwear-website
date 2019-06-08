@@ -4,3 +4,87 @@
 @import "../partials/shoppingBag";
 
 @include main();
+.contact {
+  //border: 1px solid red;
+  @include centerDivs();
+  flex-direction: column;
+  background: rgb(243, 243, 243);
+  h1 {
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    color: rgb(0, 0, 0);
+  }
+  input,
+  textarea {
+    width: 60%;
+    padding: 0.5vw;
+    margin-bottom: 2vw;
+    border-radius: 0.5vw;
+    border: 1px solid rgb(177, 177, 177);
+    font-size: 1vw;
+    outline: none;
+    color: rgb(255, 0, 98);
+    transition: 0.5s;
+
+    &:focus {
+      border: 1px solid rgb(233, 35, 134);
+    }
+    &::placeholder {
+      color: rgb(184, 184, 184);
+    }
+  }
+
+  textarea {
+    height: 10vw;
+    resize: none;
+  }
+  input {
+    height: 3.5vw;
+  }
+  #submit {
+    background: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.address {
+  //border: 1px solid blue;
+  //background: black;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40% 60%;
+  #addContent {
+    background: black;
+    // border-radius: 0 2vw 0 0;
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    div {
+      padding-left: 4vw;
+    }
+    h4 {
+      font-size: 1.2vw;
+      margin-bottom: 1vw;
+      color: rgb(255, 0, 98);
+    }
+    p {
+      font-size: 1vw;
+      color: rgb(180, 180, 180);
+    }
+  }
+}
+
+#addPic {
+  justify-self: center;
+  align-self: center;
+
+  img {
+    width: 20vw;
+    //transform: rotate(20deg);
+    //margin-top: 5vw;
+  }
+}

@@ -10,6 +10,7 @@ export function addToBag() {
   // console.log(cartNo);
 
   localStorage.setItem(`item${i}`, [
+    hID.innerText,
     coverPic.src,
     shoeName.innerText,
     priceTag.innerText,
@@ -23,7 +24,7 @@ export function addToBag() {
     map.set(i, i);
   }
   let obj = localStorage.getItem(map.get(`item${i}`)).split(",");
-
+  console.log(obj);
   shoppingItemsLoad(obj);
 
   if (localStorage.getItem("cartNo")) {
