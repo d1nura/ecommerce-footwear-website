@@ -15,7 +15,7 @@
   left: 50%;
   cursor: pointer;
   transform: translate(-50%, -100%);
-  z-index: 21;
+  z-index: -1;
   transition: 0.5s;
 }
 
@@ -36,7 +36,8 @@
     opacity: 0;
   }
   #cartNo {
-    opacity: 0;
+    opacity: 1;
+    transform: translate(-50%, -250%);
   }
   //background: red;
 }
@@ -44,18 +45,19 @@
 #cartNo {
   position: absolute;
   //border: 1px solid red;
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 2vw;
+  height: 2vw;
   text-align: center;
-  line-height: 2.5vw;
+  line-height: 2vw;
   border-radius: 50%;
-  background: rgb(255, 3, 121);
-  color: white;
-  opacity: 1;
+  background: rgb(252, 49, 49);
+  color: rgb(255, 255, 255);
+  //opacity: 0.8;
   top: 50%;
   left: 50%;
-  transform: translate(-10%, -165%);
-  font-size: 1.2vw;
+  transform: translate(10%, -160%);
+  font-size: 1vw;
   display: none;
   transition: 0.5s;
+  z-index: 10;
 }

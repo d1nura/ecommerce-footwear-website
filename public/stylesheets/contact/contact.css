@@ -182,7 +182,7 @@
   cursor: pointer;
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
-  z-index: 21;
+  z-index: -1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -207,27 +207,29 @@
 }
 
 .shpToggle #cartNo {
-  opacity: 0;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -250%);
+          transform: translate(-50%, -250%);
 }
 
 #cartNo {
   position: absolute;
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 2vw;
+  height: 2vw;
   text-align: center;
-  line-height: 2.5vw;
+  line-height: 2vw;
   border-radius: 50%;
-  background: #ff0379;
+  background: #fc3131;
   color: white;
-  opacity: 1;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-10%, -165%);
-          transform: translate(-10%, -165%);
-  font-size: 1.2vw;
+  -webkit-transform: translate(10%, -160%);
+          transform: translate(10%, -160%);
+  font-size: 1vw;
   display: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 10;
 }
 
 .shoppingBag {

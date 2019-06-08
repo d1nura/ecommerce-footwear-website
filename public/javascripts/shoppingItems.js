@@ -35,7 +35,7 @@ export function shoppingItems() {
         ).toFixed(2);
 
         console.log(cartNo.innerText);
-        cartNo.innerText = parseInt(cartNo.innerText) + 1;
+        cartNo.innerText = parseInt(localStorage.getItem("cartNo")) + 1;
         localStorage.setItem("cartNo", cartNo.innerText);
       };
 
@@ -60,7 +60,7 @@ export function shoppingItems() {
             parseFloat(totalPrice.innerText) - oPArr[0]
           ).toFixed(2);
 
-          cartNo.innerText = parseInt(cartNo.innerText) - 1;
+          cartNo.innerText = parseInt(localStorage.getItem("cartNo")) - 1;
           localStorage.setItem("cartNo", cartNo.innerText);
         }
       };
@@ -81,9 +81,11 @@ export function shoppingItems() {
         ).toFixed(2);
 
         cartNo.innerText =
-          parseInt(cartNo.innerText) -
+          parseInt(localStorage.getItem("cartNo")) -
           parseInt(e.target.closest("#itemDiv").querySelector("#no").innerText);
         localStorage.setItem("cartNo", cartNo.innerText);
+
+        console.log(localStorage.getItem(`item${i}`));
       };
 
       ct.push(num[i].innerText);
