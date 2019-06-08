@@ -4,3 +4,26 @@
 @import "../partials/shoppingBag";
 
 @include main();
+
+.about {
+  @include centerDivs();
+  background: rgb(243, 243, 243);
+  flex-direction: column;
+  h1 {
+    font-size: 12vw;
+    text-align: center;
+  }
+}
+
+.aboutContent {
+  @include centerDivs();
+  flex-direction: column;
+  padding: 2vw;
+  background: rgb(233, 233, 233);
+  p {
+    letter-spacing: 0.1vw;
+    font-size: 1.2vw;
+    word-spacing: 0.5vw;
+    line-height: 2vw;
+  }
+}
