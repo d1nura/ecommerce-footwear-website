@@ -10,7 +10,7 @@
   @include centerDivs();
   flex-direction: column;
   padding: 4vw;
-  transform: translate(-200%);
+  transform: translate(-120%);
   h1 {
     margin-bottom: 2vw;
     text-align: center;
@@ -20,6 +20,32 @@
     font-weight: bold;
     font-size: 2vw;
     margin-bottom: 4vw;
+  }
+  @include media(550px) {
+    width: 100%;
+    height: 45%;
+    transform: translate(-120%, 110%);
+    h1 {
+      font-size: 4.5vmax;
+    }
+    p {
+      font-size: 3.5vmax;
+    }
+  }
+}
+
+.openDetails {
+  transform: translate(100%);
+  @include media(550px) {
+    transform: translate(-5%, 110%);
+  }
+}
+
+.closeDetails {
+  transform: translate(-120%);
+  @include media(550px) {
+    transform: translate(-120%, 110%);
+    //border: 1px solid red;
   }
 }
 
@@ -53,6 +79,16 @@
     font-size: 1.5vw;
     font-weight: bold;
   }
+  @include media(550px) {
+    width: 50%;
+    select {
+      height: 4.5vmax;
+      font-size: 1.5vmax;
+    }
+    p {
+      font-size: 1.2vmax;
+    }
+  }
 }
 
 #amount {
@@ -67,10 +103,18 @@
   }
   button {
     @include btnStyles(4vw, 4vw, 1px, rgb(0, 0, 0), 4vmin);
-    //padding: 0.5vw 1vw 0.5vw 1vw;
-    //border: none;
     background: none;
     color: rgb(0, 0, 0);
+  }
+
+  @include media(550px) {
+    button {
+      @include btnStyles(4.5vmax, 4.5vmax, 1px, rgb(0, 0, 0), 4vmin);
+    }
+    p {
+      font-size: 1.5vmax;
+      padding: 1vmax 1vmax 0.5vmax 1vmax;
+    }
   }
 }
 
@@ -83,5 +127,9 @@
   &:hover {
     background: black;
     color: rgb(255, 255, 255);
+  }
+  @include media(550px) {
+    @include btnStyles(50%, 4.5vmax, 1px, rgb(0, 0, 0), 2vmax);
+    line-height: 2vmax;
   }
 }

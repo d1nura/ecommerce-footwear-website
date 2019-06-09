@@ -61,4 +61,10 @@
       transform: rotate(45deg);
     }
   }
+
+  @include media(550px) {
+    img {
+      width: 40vmax;
+    }
+  }
 }

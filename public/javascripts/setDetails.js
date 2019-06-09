@@ -16,7 +16,8 @@ export function setDetails() {
       let cPrice = coverContent.querySelector("#coverPrice").innerText;
       let cName = coverContent.querySelector("#coverName").innerText;
 
-      shoeDetails.style.transform = "translateX(100%)";
+      shoeDetails.classList.add("openDetails");
+      shoeDetails.classList.remove("closeDetails");
 
       let t = e.target.closest(".box");
       shoeName.innerText = coverName.innerText = t.querySelector(
@@ -34,7 +35,8 @@ export function setDetails() {
       cover.style.pointerEvents = "none";
 
       cancel.onclick = () => {
-        shoeDetails.style.transform = "translate(-200%)";
+        shoeDetails.classList.add("closeDetails");
+        shoeDetails.classList.remove("openDetails");
         no.innerText = 1;
         coverPic.src = cPic;
         coverName.innerText = cName;
@@ -45,7 +47,9 @@ export function setDetails() {
   }
 
   cover.onclick = () => {
-    shoeDetails.style.transform = "translateX(100%)";
+    shoeDetails.classList.add("openDetails");
+    shoeDetails.classList.remove("closeDetails");
+    //shoeDetails.style.transform = "translate(100%)";
 
     shoeName.innerText = coverName.innerText;
     priceTag.innerText = coverPrice.innerText;
@@ -55,7 +59,9 @@ export function setDetails() {
     priceArr = removeDollar(coverPrice.innerText);
 
     cancel.onclick = () => {
-      shoeDetails.style.transform = "translate(-200%)";
+      shoeDetails.classList.add("closeDetails");
+      shoeDetails.classList.remove("openDetails");
+      //shoeDetails.style.transform = "translate(0%)";
       no.innerText = 1;
     };
   };

@@ -59,6 +59,7 @@
 
     @media screen and (max-width: 550px) {
       //border: 1px solid red;
+      height: 98vh;
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 5% 45% 45% 5%;

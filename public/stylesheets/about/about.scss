@@ -12,6 +12,10 @@
   h1 {
     font-size: 12vw;
     text-align: center;
+    @include media(550px) {
+      font-size: 12vmax;
+      padding: 0 2vmax 0 2vmax;
+    }
   }
 }
 
@@ -25,5 +29,12 @@
     font-size: 1.2vw;
     word-spacing: 0.5vw;
     line-height: 2vw;
+    @include media(550px) {
+      letter-spacing: 0.1vmax;
+      font-size: 2vmax;
+      word-spacing: 0.5vw;
+      line-height: 2.5vmax;
+      padding: 0 1vmax 0 1vmax;
+    }
   }
 }

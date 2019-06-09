@@ -33,7 +33,7 @@
 @media screen and (max-width: 550px) {
   .menu {
     width: 96vw;
-    height: calc(92vh * 95 / 100);
+    height: calc(98vh * 95 / 100);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -45,7 +45,7 @@
             transform: translateY(-95%);
   }
   .menu .menuBar {
-    height: calc(92vh * 5 / 100);
+    height: calc(98vh * 5 / 100);
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: auto;
@@ -171,6 +171,7 @@
   }
   .socialIcons img {
     margin: 0 1vw 0 0;
+    width: 1.8vmax;
   }
 }
 
@@ -238,12 +239,12 @@
 @media screen and (max-width: 550px) {
   #sIcons {
     bottom: 12vw;
-    left: 25%;
+    left: 5%;
     -webkit-transform: translate(100%);
             transform: translate(100%);
   }
   #sIcons img {
-    width: 2.5vw;
+    width: 2.5vmax;
   }
 }
 
@@ -285,11 +286,12 @@
   .footer #shoppingBag, #shpClose {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    width: 2.5vmax;
   }
 }
 
 #shpClose {
-  width: 2vw;
+  width: 2vmax;
   -webkit-transform: translate(150%, -100%);
           transform: translate(150%, -100%);
   opacity: 0;
@@ -314,10 +316,24 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 550px) {
+  .shpToggle #shoppingBag {
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
+  }
+}
+
 .shpToggle #cartNo {
   opacity: 1;
   -webkit-transform: translate(-50%, -250%);
           transform: translate(-50%, -250%);
+}
+
+@media screen and (max-width: 550px) {
+  .shpToggle #cartNo {
+    -webkit-transform: translate(-200%, -50%);
+            transform: translate(-200%, -50%);
+  }
 }
 
 #cartNo {
@@ -338,6 +354,17 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 10;
+}
+
+@media screen and (max-width: 550px) {
+  #cartNo {
+    -webkit-transform: translate(-200%, -50%);
+            transform: translate(-200%, -50%);
+    width: 3vmax;
+    height: 3vmax;
+    font-size: 2vmax;
+    line-height: 3vmax;
+  }
 }
 
 .shoeBoxes {
@@ -426,6 +453,12 @@
           transform: scale(1);
 }
 
+@media screen and (max-width: 550px) {
+  .box img {
+    width: 20vmax;
+  }
+}
+
 #box1 {
   background: #d7c4eb;
 }
@@ -480,6 +513,15 @@
 .arrows p {
   opacity: 0.5;
   font-size: 5vmin;
+}
+
+@media screen and (max-width: 550px) {
+  .arrows p {
+    font-size: 2.5vmax;
+  }
+  .arrows img {
+    width: 3.5vmax;
+  }
 }
 
 #leftArrow {
@@ -571,6 +613,12 @@
           transform: rotate(45deg);
 }
 
+@media screen and (max-width: 550px) {
+  .coverContent img {
+    width: 40vmax;
+  }
+}
+
 .shoeDetails {
   width: calc(96vw * 45 / 100);
   height: 100%;
@@ -594,8 +642,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 4vw;
-  -webkit-transform: translate(-200%);
-          transform: translate(-200%);
+  -webkit-transform: translate(-120%);
+          transform: translate(-120%);
 }
 
 .shoeDetails h1 {
@@ -608,6 +656,45 @@
   font-weight: bold;
   font-size: 2vw;
   margin-bottom: 4vw;
+}
+
+@media screen and (max-width: 550px) {
+  .shoeDetails {
+    width: 100%;
+    height: 45%;
+    -webkit-transform: translate(-120%, 110%);
+            transform: translate(-120%, 110%);
+  }
+  .shoeDetails h1 {
+    font-size: 4.5vmax;
+  }
+  .shoeDetails p {
+    font-size: 3.5vmax;
+  }
+}
+
+.openDetails {
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+}
+
+@media screen and (max-width: 550px) {
+  .openDetails {
+    -webkit-transform: translate(-5%, 110%);
+            transform: translate(-5%, 110%);
+  }
+}
+
+.closeDetails {
+  -webkit-transform: translate(-120%);
+          transform: translate(-120%);
+}
+
+@media screen and (max-width: 550px) {
+  .closeDetails {
+    -webkit-transform: translate(-120%, 110%);
+            transform: translate(-120%, 110%);
+  }
 }
 
 #cancel {
@@ -648,6 +735,19 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 550px) {
+  .flexDiv {
+    width: 50%;
+  }
+  .flexDiv select {
+    height: 4.5vmax;
+    font-size: 1.5vmax;
+  }
+  .flexDiv p {
+    font-size: 1.2vmax;
+  }
+}
+
 #amount {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -673,6 +773,22 @@
   color: black;
 }
 
+@media screen and (max-width: 550px) {
+  #amount button {
+    width: 4.5vmax;
+    height: 4.5vmax;
+    font-size: 4vmin;
+    border: 1px solid black;
+    background: none;
+    outline: none;
+    cursor: pointer;
+  }
+  #amount p {
+    font-size: 1.5vmax;
+    padding: 1vmax 1vmax 0.5vmax 1vmax;
+  }
+}
+
 #addToBag {
   width: 80%;
   height: 4vw;
@@ -691,6 +807,19 @@
 #addToBag:hover {
   background: black;
   color: white;
+}
+
+@media screen and (max-width: 550px) {
+  #addToBag {
+    width: 50%;
+    height: 4.5vmax;
+    font-size: 2vmax;
+    border: 1px solid black;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    line-height: 2vmax;
+  }
 }
 
 .shoppingBag {
@@ -725,6 +854,30 @@
   }
 }
 
+.openBag {
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
+@media screen and (max-width: 550px) {
+  .openBag {
+    -webkit-transform: translate(5%);
+            transform: translate(5%);
+  }
+}
+
+.closeBag {
+  -webkit-transform: translate(120%);
+          transform: translate(120%);
+}
+
+@media screen and (max-width: 550px) {
+  .closeBag {
+    -webkit-transform: translate(120%);
+            transform: translate(120%);
+  }
+}
+
 .clearCart {
   position: relative;
   background: #030303;
@@ -744,11 +897,11 @@
 }
 
 .clearCart img {
-  width: 2.5vw;
+  width: 3.5vmax;
 }
 
 .clearCart p {
-  font-size: 1.2vw;
+  font-size: 1.2vmax;
   cursor: pointer;
   color: #fdfbfb;
   font-weight: bold;
@@ -758,6 +911,12 @@
 
 .clearCart:hover p {
   color: red;
+}
+
+@media screen and (max-width: 550px) {
+  .clearCart p {
+    font-size: 2vmax;
+  }
 }
 
 .checkout {
@@ -772,7 +931,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.2vw;
+  font-size: 1.2vmax;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -786,6 +945,12 @@
   background: #1bf513;
   color: white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .checkout {
+    font-size: 2vmax;
+  }
 }
 
 .shoppingItems {
@@ -805,6 +970,15 @@
   font-size: 1.4vw;
 }
 
+@media screen and (max-width: 550px) {
+  .shoppingItems #shoePicS {
+    width: 10vmax;
+  }
+  .shoppingItems h2 {
+    font-size: 2.5vmax;
+  }
+}
+
 #itemDiv {
   border-bottom: 1px solid #b3b3b3;
   padding: 1.2vw 2vw 1.2vw 2vw;
@@ -819,6 +993,12 @@
   transition: 0.5s;
 }
 
+@media screen and (max-width: 550px) {
+  #itemDiv {
+    padding: 2vmax;
+  }
+}
+
 #itemDiv #itemNames {
   padding-left: 3.5vw;
 }
@@ -826,6 +1006,15 @@
 #itemDiv #itemNames p {
   font-size: 1.5vw;
   margin-top: 0.5vw;
+}
+
+@media screen and (max-width: 550px) {
+  #itemDiv #itemNames {
+    padding-left: 5vmax;
+  }
+  #itemDiv #itemNames p {
+    font-size: 2.5vmax;
+  }
 }
 
 #itemDiv #amountSelect {
@@ -850,6 +1039,18 @@
   font-size: 1.3vw;
 }
 
+@media screen and (max-width: 550px) {
+  #itemDiv #amountSelect {
+    margin-left: 5vmax;
+    margin-top: 1.2vmax;
+  }
+  #itemDiv #amountSelect select {
+    height: 3vmax;
+    font-size: 2vmax;
+    margin-left: 1.5vmax;
+  }
+}
+
 #itemDiv #remove {
   width: 6.5vw;
   height: 2vw;
@@ -872,6 +1073,21 @@
   color: black;
 }
 
+@media screen and (max-width: 550px) {
+  #itemDiv #remove {
+    width: 8.5vmax;
+    height: 3.5vmax;
+    font-size: 1vw;
+    border: 1px solid black;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    color: white;
+    font-size: 1.5vmax;
+  }
+}
+
 #itemDiv #amount button {
   width: 2.2vw;
   height: 2.2vw;
@@ -880,6 +1096,29 @@
   background: none;
   outline: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  #itemDiv #amount button {
+    width: 3vmax;
+    height: 3vmax;
+    font-size: 1.5vmax;
+    border: 1px solid black;
+    background: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+#itemDiv #amount p {
+  padding: 1vmax 2vmin 1vmax 2vmin;
+  font-size: 2vmin;
+}
+
+@media screen and (max-width: 550px) {
+  #itemDiv #amount p {
+    font-size: 3vmin;
+  }
 }
 
 .container {
@@ -914,6 +1153,7 @@
 
 @media screen and (max-width: 550px) {
   .content {
+    height: 98vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;

@@ -19,12 +19,13 @@
   transition: 0.5s;
   @include media(550px) {
     transform: translate(-50%, -50%);
+    width: 2.5vmax;
   }
 }
 
 #shpClose {
   @extend %iconStyles;
-  width: 2vw;
+  width: 2vmax;
   transform: translate(150%, -100%);
   opacity: 0;
 }
@@ -40,10 +41,16 @@
   #shoppingBag {
     transform: translate(150%, -100%);
     opacity: 0;
+    @include media(550px) {
+      transform: translate(-50%, 100%);
+    }
   }
   #cartNo {
     opacity: 1;
     transform: translate(-50%, -250%);
+    @include media(550px) {
+      transform: translate(-200%, -50%);
+    }
   }
   //background: red;
 }
@@ -66,4 +73,11 @@
   display: none;
   transition: 0.5s;
   z-index: 10;
+  @include media(550px) {
+    transform: translate(-200%, -50%);
+    width: 3vmax;
+    height: 3vmax;
+    font-size: 2vmax;
+    line-height: 3vmax;
+  }
 }

@@ -11,7 +11,7 @@
   background: white;
   @include media(550px) {
     width: 96vw;
-    height: calc(92vh * 95 / 100);
+    height: calc(98vh * 95 / 100);
     display: flex;
     flex-direction: column;
     //grid-template-columns: 100%;
@@ -21,7 +21,7 @@
     .menuBar {
       // background: mediumaquamarine;
       //  border: 1px solid blueviolet;
-      height: calc(92vh * 5 / 100);
+      height: calc(98vh * 5 / 100);
       display: grid;
       grid-template-rows: auto;
       grid-template-columns: repeat(3, 1fr);
@@ -110,6 +110,7 @@
     margin: 0;
     img {
       margin: 0 1vw 0 0;
+      width: 1.8vmax;
     }
   }
 }
@@ -159,10 +160,10 @@
   transition: 1s;
   @include media(550px) {
     bottom: 12vw;
-    left: 25%;
+    left: 5%;
     transform: translate(100%);
     img {
-      width: 2.5vw;
+      width: 2.5vmax;
     }
   }
 }

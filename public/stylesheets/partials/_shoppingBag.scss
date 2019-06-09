@@ -21,6 +21,20 @@
   }
 }
 
+.openBag {
+  transform: translate(0%);
+  @include media(550px) {
+    transform: translate(5%);
+  }
+}
+
+.closeBag {
+  transform: translate(120%);
+  @include media(550px) {
+    transform: translate(120%);
+  }
+}
+
 .clearCart {
   position: relative;
   //border: 1px solid red;
@@ -29,10 +43,10 @@
   justify-content: space-between;
   padding: 1.2vw 2vw 1.2vw 2vw;
   img {
-    width: 2.5vw;
+    width: 3.5vmax;
   }
   p {
-    font-size: 1.2vw;
+    font-size: 1.2vmax;
     cursor: pointer;
     color: rgb(253, 251, 251);
     font-weight: bold;
@@ -43,6 +57,11 @@
       color: rgb(255, 0, 0);
     }
   }
+  @include media(550px) {
+    p {
+      font-size: 2vmax;
+    }
+  }
 }
 
 .checkout {
@@ -50,7 +69,7 @@
   padding: 1.2vw 2vw 1.2vw 2vw;
   //border: 1px solid red;
   @include centerDivs();
-  font-size: 1.2vw;
+  font-size: 1.2vmax;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -62,13 +81,16 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
+  @include media(550px) {
+    font-size: 2vmax;
+  }
 }
 
 .shoppingItems {
   #shoePicS {
     width: 6vw;
     transform: rotate(45deg);
-    // border: 1px solid mediumblue;
+    //border: 1px solid mediumblue;
   }
   h2 {
     font-size: 1.4vw;
@@ -78,6 +100,14 @@
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  @include media(550px) {
+    #shoePicS {
+      width: 10vmax;
+    }
+    h2 {
+      font-size: 2.5vmax;
+    }
+  }
 }
 
 #itemDiv {
@@ -87,6 +117,9 @@
   grid-template-columns: 10% 80% 10%;
   align-items: center;
   transition: 0.5s;
+  @include media(550px) {
+    padding: 2vmax;
+  }
 
   #itemNames {
     padding-left: 3.5vw;
@@ -94,12 +127,19 @@
       font-size: 1.5vw;
       margin-top: 0.5vw;
     }
+    @include media(550px) {
+      padding-left: 5vmax;
+      p {
+        font-size: 2.5vmax;
+      }
+    }
   }
 
   #amountSelect {
     display: flex;
     margin-top: 0.8vw;
     margin-left: 3.5vw;
+    // border: 1px solid red;
     p {
       line-height: 2vw;
       padding: 0 1vw 0 1vw;
@@ -111,6 +151,15 @@
       background: none;
       height: 2.2vw;
       font-size: 1.3vw;
+    }
+    @include media(550px) {
+      margin-left: 5vmax;
+      margin-top: 1.2vmax;
+      select {
+        height: 3vmax;
+        font-size: 2vmax;
+        margin-left: 1.5vmax;
+      }
     }
   }
 
@@ -125,11 +174,28 @@
       background: rgb(255, 255, 255);
       color: rgb(0, 0, 0);
     }
+    @include media(550px) {
+      @include btnStyles(8.5vmax, 3.5vmax, 1px, rgb(0, 0, 0), 1vw);
+      background: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      font-size: 1.5vmax;
+    }
   }
 
   #amount {
     button {
       @include btnStyles(2.2vw, 2.2vw, 1px, black, 1.5vw);
+      @include media(550px) {
+        @include btnStyles(3vmax, 3vmax, 1px, black, 1.5vmax);
+      }
+    }
+
+    p {
+      padding: 1vmax 2vmin 1vmax 2vmin;
+      font-size: 2vmin;
+      @include media(550px) {
+        font-size: 3vmin;
+      }
     }
   }
 }

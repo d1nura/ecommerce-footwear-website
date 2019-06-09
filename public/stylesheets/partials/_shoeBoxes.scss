@@ -61,6 +61,11 @@
       transform: scale(1);
     }
   }
+  @include media(550px) {
+    img {
+      width: 20vmax;
+    }
+  }
 }
 
 #box1 {
@@ -105,6 +110,15 @@
   p {
     opacity: 0.5;
     font-size: 5vmin;
+  }
+  @include media(550px) {
+    // border: 1px solid red;
+    p {
+      font-size: 2.5vmax;
+    }
+    img {
+      width: 3.5vmax;
+    }
   }
 }
 

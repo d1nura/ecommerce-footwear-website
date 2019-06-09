@@ -9,13 +9,17 @@ export function shoppingBag() {
 
   shpBag.onclick = () => {
     console.log("shpBag");
-    shpDiv.style.transform = "translateX(0%)";
+    //shpDiv.style.transform = "translateX(0%)";
+    shpDiv.classList.add("openBag");
+    shpDiv.classList.remove("closeBag");
     footer.classList.toggle("shpToggle");
     shoppingItems();
   };
 
   shpClose.onclick = () => {
-    shpDiv.style.transform = "translate(120%)";
+    //shpDiv.style.transform = "translate(120%)";
+    shpDiv.classList.add("closeBag");
+    shpDiv.classList.remove("openBag");
     footer.classList.toggle("shpToggle");
     if (cartNo.innerText == 0) {
       cartNo.style.display = "none";
