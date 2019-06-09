@@ -9,6 +9,25 @@
   transition: 0.5s;
   z-index: 11;
   background: white;
+  @include media(550px) {
+    width: 96vw;
+    height: calc(92vh * 95 / 100);
+    display: flex;
+    flex-direction: column;
+    //grid-template-columns: 100%;
+    //grid-temlplate-rows: 90% 10%;
+    // border: 2px solid rgb(9, 255, 0);
+    transform: translateY(-95%);
+    .menuBar {
+      // background: mediumaquamarine;
+      //  border: 1px solid blueviolet;
+      height: calc(92vh * 5 / 100);
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+  }
 }
 
 .showMenu {
@@ -35,7 +54,13 @@
 .menuBar {
   position: relative;
   //border: 1px solid red;
+  //background: red;
   padding: 2vh 0 2vh 0;
+
+  @include media(550px) {
+    //display: flex;
+    padding: 0;
+  }
 }
 
 #logo {
@@ -44,6 +69,11 @@
   left: 50%;
   transform: translateX(-50%);
   transition: 1.5s;
+  //border: 1px solid red;
+  @include media(550px) {
+    margin-left: 4vw;
+    left: 0;
+  }
 }
 
 #menuIcon {
@@ -53,6 +83,11 @@
   width: 4vmin;
   transform: translate(-50%, -100%);
   cursor: pointer;
+  @include media(550px) {
+    position: relative;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
 }
 
 .socialIcons {
@@ -67,13 +102,27 @@
     width: 2.5vmin;
     margin-bottom: 1vmin;
   }
+  @include media(550px) {
+    flex-direction: row;
+    justify-content: flex-end;
+    top: 0;
+    height: auto;
+    margin: 0;
+    img {
+      margin: 0 1vw 0 0;
+    }
+  }
 }
 
 .menuContext {
   // border: 1px solid red;
   @include centerDivs();
   flex-direction: column;
-  background: white;
+  background: rgb(255, 255, 255);
+  //height: 50vh;
+  @include media(550px) {
+    height: 90vh;
+  }
   a {
     font-size: 3vw;
     color: rgb(5, 5, 5);
@@ -85,24 +134,37 @@
       color: rgb(175, 174, 174);
       //mix-blend-mode: overlay;
     }
+    @include media(550px) {
+      font-size: 8vw;
+      //text-align: center;
+      padding: 2.5vw;
+      color: rgb(65, 65, 65);
+    }
   }
 }
 
 #sIcons {
   //position: relative;
   //top: 0;
-  //border: 1px solid red;
+  // border: 1px solid red;
   left: 1vw;
   position: absolute;
   bottom: 0.5vw;
   transform: translate(-100%);
   img {
     width: 1.5vw;
-    //border: 1px solid red;
     padding: 0;
     margin: 0;
   }
   transition: 1s;
+  @include media(550px) {
+    bottom: 12vw;
+    left: 25%;
+    transform: translate(100%);
+    img {
+      width: 2.5vw;
+    }
+  }
 }
 
 #cLogo {
@@ -114,5 +176,6 @@
     opacity: 0;
     transition: 1s;
     transform: translate(-100%);
+    // border: 1px solid red;
   }
 }

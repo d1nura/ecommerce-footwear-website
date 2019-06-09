@@ -17,6 +17,9 @@
   transform: translate(-50%, -100%);
   z-index: -1;
   transition: 0.5s;
+  @include media(550px) {
+    transform: translate(-50%, -50%);
+  }
 }
 
 #shpClose {
@@ -30,6 +33,9 @@
   #shpClose {
     transform: translate(-50%, -100%);
     opacity: 1;
+    @include media(550px) {
+      transform: translate(-50%, -50%);
+    }
   }
   #shoppingBag {
     transform: translate(150%, -100%);

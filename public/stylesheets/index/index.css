@@ -30,6 +30,34 @@
   background: white;
 }
 
+@media screen and (max-width: 550px) {
+  .menu {
+    width: 96vw;
+    height: calc(92vh * 95 / 100);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
+  }
+  .menu .menuBar {
+    height: calc(92vh * 5 / 100);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .showMenu {
   -webkit-transform: translate(0);
           transform: translate(0);
@@ -64,6 +92,12 @@
   padding: 2vh 0 2vh 0;
 }
 
+@media screen and (max-width: 550px) {
+  .menuBar {
+    padding: 0;
+  }
+}
+
 #logo {
   width: 6vmin;
   position: relative;
@@ -74,6 +108,13 @@
   transition: 1.5s;
 }
 
+@media screen and (max-width: 550px) {
+  #logo {
+    margin-left: 4vw;
+    left: 0;
+  }
+}
+
 #menuIcon {
   position: absolute;
   top: 50%;
@@ -82,6 +123,15 @@
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
   cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  #menuIcon {
+    position: relative;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
 }
 
 .socialIcons {
@@ -106,6 +156,24 @@
   margin-bottom: 1vmin;
 }
 
+@media screen and (max-width: 550px) {
+  .socialIcons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    top: 0;
+    height: auto;
+    margin: 0;
+  }
+  .socialIcons img {
+    margin: 0 1vw 0 0;
+  }
+}
+
 .menuContext {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,6 +191,12 @@
   background: white;
 }
 
+@media screen and (max-width: 550px) {
+  .menuContext {
+    height: 90vh;
+  }
+}
+
 .menuContext a {
   font-size: 3vw;
   color: #050505;
@@ -135,6 +209,14 @@
 
 .menuContext a:hover {
   color: #afaeae;
+}
+
+@media screen and (max-width: 550px) {
+  .menuContext a {
+    font-size: 8vw;
+    padding: 2.5vw;
+    color: #414141;
+  }
 }
 
 #sIcons {
@@ -151,6 +233,18 @@
   width: 1.5vw;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 550px) {
+  #sIcons {
+    bottom: 12vw;
+    left: 25%;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  #sIcons img {
+    width: 2.5vw;
+  }
 }
 
 #cLogo img {
@@ -187,6 +281,13 @@
   transition: 0.5s;
 }
 
+@media screen and (max-width: 550px) {
+  .footer #shoppingBag, #shpClose {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 #shpClose {
   width: 2vw;
   -webkit-transform: translate(150%, -100%);
@@ -198,6 +299,13 @@
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
   opacity: 1;
+}
+
+@media screen and (max-width: 550px) {
+  .shpToggle #shpClose {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 .shpToggle #shoppingBag {
@@ -486,6 +594,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 4vw;
+  -webkit-transform: translate(-200%);
+          transform: translate(-200%);
 }
 
 .shoeDetails h1 {
@@ -588,8 +698,8 @@
   right: 5%;
   width: calc(96vw * 45 / 100);
   height: 100%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
   background: #f3f3f5;
   z-index: 15;
   -webkit-transition: 0.5s;
@@ -606,6 +716,13 @@
   background: white;
   width: 3vw;
   position: absolute;
+}
+
+@media screen and (max-width: 550px) {
+  .shoppingBag {
+    width: 100%;
+    height: 95%;
+  }
 }
 
 .clearCart {
@@ -793,5 +910,16 @@
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 5% 45% 45% 5%;
+        grid-template-rows: 5% 45% 45% 5%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

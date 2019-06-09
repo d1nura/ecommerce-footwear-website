@@ -16,6 +16,12 @@
   align-items: center;
 }
 
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
 @mixin btnStyles($width, $height, $borderSize, $borderClr, $font) {
   width: $width;
   height: $height;
@@ -50,5 +56,25 @@
     grid-template-rows: 100%;
     overflow: hidden;
     //box-shadow: 5px 5px 1rem 1px rgb(255, 252, 163);
+
+    @media screen and (max-width: 550px) {
+      //border: 1px solid red;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 5% 45% 45% 5%;
+
+      .menu {
+        //border: 1px solid green;
+      }
+      .footer {
+        // border: 1px solid navy;
+      }
+      .cover {
+        // border: 1px solid hotpink;
+      }
+      .shoeBoxes {
+        //border: 1px solid mediumslateblue;
+      }
+    }
   }
 }

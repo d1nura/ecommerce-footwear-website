@@ -34,7 +34,7 @@ export function setDetails() {
       cover.style.pointerEvents = "none";
 
       cancel.onclick = () => {
-        shoeDetails.style.transform = "translate(0)";
+        shoeDetails.style.transform = "translate(-200%)";
         no.innerText = 1;
         coverPic.src = cPic;
         coverName.innerText = cName;
@@ -55,7 +55,7 @@ export function setDetails() {
     priceArr = removeDollar(coverPrice.innerText);
 
     cancel.onclick = () => {
-      shoeDetails.style.transform = "translate(0)";
+      shoeDetails.style.transform = "translate(-200%)";
       no.innerText = 1;
     };
   };

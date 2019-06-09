@@ -15,7 +15,7 @@ export function shoppingBag() {
   };
 
   shpClose.onclick = () => {
-    shpDiv.style.transform = "translate(100%)";
+    shpDiv.style.transform = "translate(120%)";
     footer.classList.toggle("shpToggle");
     if (cartNo.innerText == 0) {
       cartNo.style.display = "none";
