@@ -26,6 +26,8 @@ export function shoppingItems() {
         it.querySelector("#no").innerText =
           parseInt(it.querySelector("#no").innerText) + 1;
 
+        getStorage(e, "inc");
+
         it.querySelector(".itmPrice").innerText =
           "$" +
           (oPArr[0] * parseInt(it.querySelector("#no").innerText)).toFixed(2);
@@ -34,7 +36,7 @@ export function shoppingItems() {
           parseFloat(totalPrice.innerText) + oPArr[0]
         ).toFixed(2);
 
-        console.log(cartNo.innerText);
+        //console.log(cartNo.innerText);
         cartNo.innerText = parseInt(localStorage.getItem("cartNo")) + 1;
         localStorage.setItem("cartNo", cartNo.innerText);
       };
@@ -80,18 +82,7 @@ export function shoppingItems() {
           )
         ).toFixed(2);
 
-        //console.log(Object.keys(localStorage));
-        for (let j = 0; j < localStorage.length * 2; j++) {
-          if (localStorage.getItem(`item${j}`)) {
-            if (
-              localStorage.getItem(`item${j}`).split(",")[0] ==
-              e.target.closest("#itemDiv").querySelector("span").innerText
-            ) {
-              console.log(j);
-              localStorage.removeItem(`item${j}`);
-            }
-          }
-        }
+        getStorage(e, "remove");
 
         cartNo.innerText =
           parseInt(localStorage.getItem("cartNo")) -
@@ -119,5 +110,20 @@ export function shoppingItems() {
         }
       }
     };
+  }
+}
+
+function getStorage(e, name) {
+  for (let j = 0; j < localStorage.length * 2; j++) {
+    if (localStorage.getItem(`item${j}`)) {
+      if (
+        localStorage.getItem(`item${j}`).split(",")[0] ==
+        e.target.closest("#itemDiv").querySelector("span").innerText
+      ) {
+        if (name == "remove") {
+          localStorage.removeItem(`item${j}`);
+        }
+      }
+    }
   }
 }

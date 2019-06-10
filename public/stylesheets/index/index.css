@@ -1111,7 +1111,7 @@
 }
 
 #itemDiv #amount p {
-  padding: 1vmax 2vmin 1vmax 2vmin;
+  padding: 0vw 2vmin 0vw 2vmin;
   font-size: 2vmin;
 }
 

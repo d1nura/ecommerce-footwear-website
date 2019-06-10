@@ -37,7 +37,6 @@ function selectCover(n, data) {
   coverContent.querySelector("img").src = data[n][0].pic;
   coverContent.querySelector("h3").innerText = data[n][0].price;
   coverContent.querySelector("p").innerText = data[n][0].title;
-  coverContent.querySelector("#hId").innerText = data[n][0].id;
 }
 
 function selectShowBoxes(x, data) {
@@ -48,7 +47,6 @@ function selectShowBoxes(x, data) {
       <img id="boxImg" src="${data[x][i + 1].pic}"/>
       <h3 id="boxPrice">${data[x][i + 1].price}</h3>
       <p id="boxTitle">${data[x][i + 1].title}</p>
-      <span style="display:none">${data[x][i + 1].id}</span>
-    `;
+       `;
   }
 }

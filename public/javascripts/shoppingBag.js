@@ -8,8 +8,6 @@ export function shoppingBag() {
   let footer = document.querySelector(".footer");
 
   shpBag.onclick = () => {
-    console.log("shpBag");
-    //shpDiv.style.transform = "translateX(0%)";
     shpDiv.classList.add("openBag");
     shpDiv.classList.remove("closeBag");
     footer.classList.toggle("shpToggle");
@@ -17,7 +15,6 @@ export function shoppingBag() {
   };
 
   shpClose.onclick = () => {
-    //shpDiv.style.transform = "translate(120%)";
     shpDiv.classList.add("closeBag");
     shpDiv.classList.remove("openBag");
     footer.classList.toggle("shpToggle");

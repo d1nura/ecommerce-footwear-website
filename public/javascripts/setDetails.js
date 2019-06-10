@@ -27,7 +27,7 @@ export function setDetails() {
         "#boxPrice"
       ).innerText;
       coverPic.src = t.querySelector("#boxImg").src;
-      hID.innerText = t.querySelector("span").innerText;
+
       //console.log(hID);
 
       priceArr = removeDollar(t.querySelector("#boxPrice").innerText);
@@ -49,19 +49,16 @@ export function setDetails() {
   cover.onclick = () => {
     shoeDetails.classList.add("openDetails");
     shoeDetails.classList.remove("closeDetails");
-    //shoeDetails.style.transform = "translate(100%)";
 
     shoeName.innerText = coverName.innerText;
     priceTag.innerText = coverPrice.innerText;
-    hID.innerText = hId.innerText;
-    //console.log(hId);
 
     priceArr = removeDollar(coverPrice.innerText);
 
     cancel.onclick = () => {
       shoeDetails.classList.add("closeDetails");
       shoeDetails.classList.remove("openDetails");
-      //shoeDetails.style.transform = "translate(0%)";
+
       no.innerText = 1;
     };
   };

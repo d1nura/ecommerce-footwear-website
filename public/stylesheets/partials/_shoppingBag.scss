@@ -139,7 +139,7 @@
     display: flex;
     margin-top: 0.8vw;
     margin-left: 3.5vw;
-    // border: 1px solid red;
+    //border: 1px solid red;
     p {
       line-height: 2vw;
       padding: 0 1vw 0 1vw;
@@ -191,7 +191,8 @@
     }
 
     p {
-      padding: 1vmax 2vmin 1vmax 2vmin;
+      padding: 0vw 2vmin 0vw 2vmin;
+      //border: 1px solid green;
       font-size: 2vmin;
       @include media(550px) {
         font-size: 3vmin;

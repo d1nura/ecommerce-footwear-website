@@ -656,7 +656,7 @@
 }
 
 #itemDiv #amount p {
-  padding: 1vmax 2vmin 1vmax 2vmin;
+  padding: 0vw 2vmin 0vw 2vmin;
   font-size: 2vmin;
 }
 
@@ -731,10 +731,16 @@
   color: black;
 }
 
+@media screen and (max-width: 550px) {
+  .contact h1 {
+    font-size: 4vmax;
+  }
+}
+
 .contact input,
 .contact textarea {
   width: 60%;
-  padding: 0.5vw;
+  padding: 0.5vmax;
   margin-bottom: 2vw;
   border-radius: 0.5vw;
   border: 1px solid #b1b1b1;
@@ -770,13 +776,34 @@
   color: #b8b8b8;
 }
 
+@media screen and (max-width: 550px) {
+  .contact input,
+  .contact textarea {
+    font-size: 1.5vmax;
+  }
+}
+
 .contact textarea {
   height: 10vw;
   resize: none;
 }
 
+@media screen and (max-width: 550px) {
+  .contact textarea {
+    width: 50%;
+    height: 15vmax;
+  }
+}
+
 .contact input {
   height: 3.5vw;
+}
+
+@media screen and (max-width: 550px) {
+  .contact input {
+    width: 50%;
+    height: 4vmax;
+  }
 }
 
 .contact #submit {
@@ -824,6 +851,18 @@
   color: #b4b4b4;
 }
 
+@media screen and (max-width: 550px) {
+  .address #addContent div {
+    padding-left: 4vmax;
+  }
+  .address #addContent h4 {
+    font-size: 1.8vmax;
+  }
+  .address #addContent p {
+    font-size: 1.5vmax;
+  }
+}
+
 #addPic {
   -ms-grid-column-align: center;
       justify-self: center;
@@ -834,5 +873,11 @@
 
 #addPic img {
   width: 20vw;
+}
+
+@media screen and (max-width: 550px) {
+  #addPic img {
+    width: 25vmax;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

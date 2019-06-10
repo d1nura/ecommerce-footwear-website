@@ -13,11 +13,14 @@
     margin-bottom: 2vw;
     font-size: 4vw;
     color: rgb(0, 0, 0);
+    @include media(550px) {
+      font-size: 4vmax;
+    }
   }
   input,
   textarea {
     width: 60%;
-    padding: 0.5vw;
+    padding: 0.5vmax;
     margin-bottom: 2vw;
     border-radius: 0.5vw;
     border: 1px solid rgb(177, 177, 177);
@@ -32,14 +35,25 @@
     &::placeholder {
       color: rgb(184, 184, 184);
     }
+    @include media(550px) {
+      font-size: 1.5vmax;
+    }
   }
 
   textarea {
     height: 10vw;
     resize: none;
+    @include media(550px) {
+      width: 50%;
+      height: 15vmax;
+    }
   }
   input {
     height: 3.5vw;
+    @include media(550px) {
+      width: 50%;
+      height: 4vmax;
+    }
   }
   #submit {
     background: rgb(0, 0, 0);
@@ -75,6 +89,17 @@
       font-size: 1vw;
       color: rgb(180, 180, 180);
     }
+    @include media(550px) {
+      div {
+        padding-left: 4vmax;
+      }
+      h4 {
+        font-size: 1.8vmax;
+      }
+      p {
+        font-size: 1.5vmax;
+      }
+    }
   }
 }
 
@@ -84,7 +109,8 @@
 
   img {
     width: 20vw;
-    //transform: rotate(20deg);
-    //margin-top: 5vw;
+    @include media(550px) {
+      width: 25vmax;
+    }
   }
 }

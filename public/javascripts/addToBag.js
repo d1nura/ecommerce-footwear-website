@@ -4,13 +4,11 @@ let i = 0;
 let map = new Map();
 
 export function addToBag() {
-  // console.log("addtobag");
   let flexDiv = document.querySelector(".flexDiv");
   let number = flexDiv.querySelector("#no");
-  // console.log(cartNo);
 
   localStorage.setItem(`item${i}`, [
-    hID.innerText,
+    `${i}`,
     coverPic.src,
     shoeName.innerText,
     priceTag.innerText,
