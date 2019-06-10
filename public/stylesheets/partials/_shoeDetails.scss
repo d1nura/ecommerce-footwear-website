@@ -105,6 +105,7 @@
     @include btnStyles(4vw, 4vw, 1px, rgb(0, 0, 0), 4vmin);
     background: none;
     color: rgb(0, 0, 0);
+    line-height: 4vmin;
   }
 
   @include media(550px) {
@@ -124,6 +125,7 @@
   transition: 0.5s;
   background: none;
   color: rgb(0, 0, 0);
+  line-height: 2.5vmin;
   &:hover {
     background: black;
     color: rgb(255, 255, 255);

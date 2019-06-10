@@ -26,7 +26,7 @@ export function shoppingItems() {
         it.querySelector("#no").innerText =
           parseInt(it.querySelector("#no").innerText) + 1;
 
-        getStorage(e, "inc");
+        //getStorage(e, "inc");
 
         it.querySelector(".itmPrice").innerText =
           "$" +

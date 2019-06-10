@@ -469,7 +469,7 @@
 
 #box2 p,
 #box2 h3 {
-  color: #838383;
+  color: black;
 }
 
 #box3 {
@@ -478,7 +478,7 @@
 
 #box3 p,
 #box3 h3 {
-  color: #838383;
+  color: black;
 }
 
 #box4 {
@@ -587,7 +587,7 @@
   transition: 0.5s;
   opacity: 0;
   position: absolute;
-  color: dimgray;
+  color: white;
   bottom: 0;
   left: 0;
   padding: 0 2vw 1.2vw 2vw;
@@ -771,6 +771,7 @@
   cursor: pointer;
   background: none;
   color: black;
+  line-height: 4vmin;
 }
 
 @media screen and (max-width: 550px) {
@@ -802,6 +803,7 @@
   transition: 0.5s;
   background: none;
   color: black;
+  line-height: 2.5vmin;
 }
 
 #addToBag:hover {
